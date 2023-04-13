@@ -4,6 +4,7 @@ import ComidaComponent from './components/ComponentComida/ComidaComponent';
 import SapatoCompenent from './components/ComponentSapato/SapatoCompenent';
 import BebidaComponent from './components/ComponentBebida/BebidaComponent'
 import SalgadoCompenent from './components/ComponentSalgado/SalgadoComponent';
+import MaquiagemComponent from './components/ComponentMaquiagem/ComponentMaquiagem';
 import FavoritoComponent from './components/ComponentFavorito/FavoritoComponent';
 import InformaticaComponent from './components/ComponentInformatica/InformaticaComponent'
 // import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
@@ -11,6 +12,23 @@ import BrinquedoComponent from './components/ComponentBrinquedo/BrinquedoCompone
 
 function App() {
 
+  const maquiagemProdutos=[
+    {
+      id:1,
+      nome: 'rimel',
+      preco: 12.00
+    },
+    {
+      id:2,
+      nome:'batom',
+      preco: 10.00
+    },
+    {
+      id:3,
+      nome:'blush',
+      preco:8.50
+    },
+  ]
   const comidaProdutos=[
     {
       id:1,
@@ -177,6 +195,9 @@ function App() {
         </div>
         <div>
             <InformaticaComponent adicionarFavoritos={adicionarFavoritos} informaticaProdutos={informaticaProdutos}/>
+        </div>
+        <div className="box">
+          <MaquiagemComponent maquiagemProdutos={maquiagemProdutos}/>
         </div>
     </div>
   );
