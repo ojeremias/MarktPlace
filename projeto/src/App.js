@@ -4,10 +4,28 @@ import ComidaComponent from './components/ComponenteComida/ComidaComponent';
 import SapatoCompenent from './components/ComponentSapato/SapatoCompenent';
 import BebidaComponent from './components/ComponentBebida/BebidaComponent'
 import SalgadoCompenent from './components/ComponentSalgado/SalgadoComponent';
+import MaquiagemComponent from './components/ComponentMaquiagem/ComponentMaquiagem';
 import FavoritoComponent from './components/ComponentFavorito/FavoritoComponent';
 
 function App() {
 
+  const maquiagemProdutos=[
+    {
+      id:1,
+      nome: 'rimel',
+      preco: 12.00
+    },
+    {
+      id:2,
+      nome:'batom',
+      preco: 10.00
+    },
+    {
+      id:3,
+      nome:'blush',
+      preco:8.50
+    },
+  ]
   const comidaProdutos=[
     {
       id:1,
@@ -160,6 +178,9 @@ function App() {
         </div>
         <div className="box">
           <SalgadoCompenent salgadoProdutos={salgadoProdutos}/>
+        </div>
+        <div className="box">
+          <MaquiagemComponent maquiagemProdutos={maquiagemProdutos}/>
         </div>
     </div>
   );
