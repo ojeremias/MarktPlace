@@ -1,23 +1,16 @@
 import React from 'react'
 
-export default function ComidaComponent(props) {
-  console.log(props)
+export default function ComidaComponent({comidaProdutos}) {
   return (
-
     <div>
-      {
-        props.comidaProdutos[0].nome
-      }
-      <br></br>
-      {
-        props.comidaProdutos[1].nome
-      }
-      <br></br>
-      {
-        props.comidaProdutos[2].nome
-      }
-      <br></br>
-
+        <div>
+            <p>Nome: {comidaProdutos[0].nome}</p>
+            <p>Valor: {comidaProdutos[0].preco}</p>
+            <button onClick={() =>{
+                
+           }
+            }>Enviar</button>
+        </div>
     </div>
  
   )
