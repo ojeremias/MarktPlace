@@ -1,8 +1,12 @@
 import React from 'react'
 
-export default function BrinquedoComponent(props) {
-    console.log(props)
+export default function BrinquedoComponent(p) {
+    console.log(p)
   return (
-    <div></div>
+    <div>
+      {p.brinquedosProduto.map(brinquedo => (
+        <p key={brinquedo.id}>{brinquedo.nome}</p>
+      ))}
+    </div>
   )
 }

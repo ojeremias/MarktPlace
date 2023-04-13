@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import './App.css';
-import ComidaComponent from './components/ComponenteComida/ComidaComponent';
+import ComidaComponent from './components/ComponentComida/ComidaComponent';
 import SapatoCompenent from './components/ComponentSapato/SapatoCompenent';
 import BebidaComponent from './components/ComponentBebida/BebidaComponent'
 import SalgadoCompenent from './components/ComponentSalgado/SalgadoComponent';
 import MaquiagemComponent from './components/ComponentMaquiagem/ComponentMaquiagem';
 import FavoritoComponent from './components/ComponentFavorito/FavoritoComponent';
+import BrinquedoComponent from './components/ComponentBrinquedo/BrinquedoComponent';
 
 function App() {
 
@@ -181,6 +182,9 @@ function App() {
         </div>
         <div className="box">
           <MaquiagemComponent maquiagemProdutos={maquiagemProdutos}/>
+        </div>
+        <div>
+          <BrinquedoComponent brinquedosProduto={brinquedosProduto}/>
         </div>
     </div>
   );
