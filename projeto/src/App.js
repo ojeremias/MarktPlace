@@ -3,6 +3,7 @@ import './App.css';
 import ComidaComponent from './components/ComponenteComida/ComidaComponent';
 import SapatoCompenent from './components/ComponentSapato/SapatoCompenent';
 import BebidaComponent from './components/ComponentBebida/BebidaComponent'
+import SalgadoCompenent from './components/ComponentSalgado/SalgadoComponent';
 import FavoritoComponent from './components/ComponentFavorito/FavoritoComponent';
 
 function App() {
@@ -94,6 +95,37 @@ function App() {
         preco: 10.00
       }
     ]
+    const salgadoProdutos = [{
+      id: 1,
+      nome: "Coxinha", 
+      valor: 3.5,
+      categoria: "Salgado"
+    },
+    {
+      id: 2,
+      nome: "Mini Coxinha", 
+      valor: 0.25,
+      categoria: "Salgado"
+    },
+    {
+      id: 3,
+      nome: "Enroladinho", 
+      valor: 3.5,
+      categoria: "Salgado"
+    },
+    {
+      id: 4,
+      nome: "Pastel de Queijo", 
+      valor: 3.5,
+      categoria: "Salgado"
+    },
+    {
+      id: 5,
+      nome: "Pastel de Carne", 
+      valor: 3.5,
+      categoria: "Salgado"
+    }
+  ];
 
     const [favoritos, setFavoritos]=useState([])
 
@@ -125,6 +157,9 @@ function App() {
         </div>
         <div className="box">
           <SapatoCompenent sapatoProdutos={sapatoProdutos}/>
+        </div>
+        <div className="box">
+          <SalgadoCompenent salgadoProdutos={salgadoProdutos}/>
         </div>
     </div>
   );
