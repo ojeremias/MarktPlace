@@ -1,0 +1,17 @@
+App{
+  flex: 1;
+  background-color: blueviolet;
+}
+.box-produto{
+  min-height: 300px;
+  min-width: 90%;
+  padding: 20px;
+  margin: 20px;
+
+  border: 1px solid blue;
+}
+
+.box{
+  flex: 1;
+  border: 1px solid green;
+}
