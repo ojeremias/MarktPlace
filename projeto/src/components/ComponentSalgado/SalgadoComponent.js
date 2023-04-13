@@ -1,6 +1,6 @@
 import React from "react";
 
-function SalgadoComponent ({ salgadoProdutos, categoria, onAdd}) {
+function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavoritos}) {
 
     /**const produtosFiltrado = salgadosProdutos.filter(p => p.categoria === categoria);
 
@@ -9,14 +9,17 @@ function SalgadoComponent ({ salgadoProdutos, categoria, onAdd}) {
             onAdd (p.id);
         }
     }*/
-console.log(salgadoProdutos)
+
     return (
         <div className="box-produto">
             {
                 salgadoProdutos.map(p =>
                     <div key={p.id}>
                         {p.nome}:::{p.valor}
-                        <button>Adicionar</button>
+                        <button onClick={()=>{
+                            adicionarFavoritos(p);
+                            console.log(p)
+                        }}>Adicionar</button>
                     </div>
                 )
             }

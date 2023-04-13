@@ -6,13 +6,14 @@ export default function FavoritoComponent({favoritos}){ //o desconstrutor descon
         return
     }
 
-    console.log();
     return(
         <div>
-            <div>
-                <p>Produto: {favoritos[0].nome}</p>
-            </div>
-        <div></div>
+            {favoritos.map((produto)=>{
+                return <div>
+                    <p>{produto.nome}</p>
+                </div>
+            })}
+
         
         </div>
     )

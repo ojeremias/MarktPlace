@@ -1,7 +1,11 @@
 import React from 'react'
 
 export default function ComidaComponent(props) {
-  console.log(props)
+
+    if(props.comidaProdutos === 0){
+        return
+    }
+  
   return (
 
     <div>

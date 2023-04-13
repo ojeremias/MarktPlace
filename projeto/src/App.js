@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import './App.css';
-import ComidaComponent from './components/ComponenteComida/ComidaComponent';
+import ComidaComponent from './components/ComponentComida/ComidaComponent';
 import SapatoCompenent from './components/ComponentSapato/SapatoCompenent';
 import BebidaComponent from './components/ComponentBebida/BebidaComponent'
 import SalgadoCompenent from './components/ComponentSalgado/SalgadoComponent';
 import FavoritoComponent from './components/ComponentFavorito/FavoritoComponent';
+import InformaticaComponent from './components/ComponentInformatica/InformaticaComponent'
+// import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
+import BrinquedoComponent from './components/ComponentBrinquedo/BrinquedoComponent'
 
 function App() {
 
@@ -78,7 +81,7 @@ function App() {
         preco: 3500.00
       },
     ]
-    const brinquedosProduto=[
+    const brinquedoProdutos=[
       {
         id:1,
         nome: 'quebra-cabeça',
@@ -99,31 +102,26 @@ function App() {
       id: 1,
       nome: "Coxinha", 
       valor: 3.5,
-      categoria: "Salgado"
     },
     {
       id: 2,
       nome: "Mini Coxinha", 
       valor: 0.25,
-      categoria: "Salgado"
     },
     {
       id: 3,
       nome: "Enroladinho", 
       valor: 3.5,
-      categoria: "Salgado"
     },
     {
       id: 4,
       nome: "Pastel de Queijo", 
       valor: 3.5,
-      categoria: "Salgado"
     },
     {
       id: 5,
       nome: "Pastel de Carne", 
       valor: 3.5,
-      categoria: "Salgado"
     }
   ];
 
@@ -131,9 +129,17 @@ function App() {
 
     function adicionarFavoritos(produto){ //O parâmetro passado será informa pelos componentes.
       //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.
-      setFavoritos([produto])
+      console.log(produto);
+      setFavoritos([...favoritos, produto]);
       
     } 
+
+    // const [denunciado, setDenunciado]=useState([])
+
+    // function adicionarDenunciado(produto){
+    //   setDenunciado([...denunciado, produto])
+    // }
+
     console.log(favoritos);
 
     return (
@@ -141,7 +147,9 @@ function App() {
         <div>
           <FavoritoComponent favoritos={favoritos}/>
         </div>
-
+        <div>
+          {/* <DenunciadoComponent denunciado={denunciado}/> */}
+        </div>
           {/* props:{
             comidaProdutos:[{
               nome: 12321
@@ -152,14 +160,23 @@ function App() {
             }
           }] */}
         <div className="box">
-          <ComidaComponent  adicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/> {/*o 1° comidaProdutos é uma props que  meio que cria uma 
+          <ComidaComponent  adicionarDenunciadoadicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/> {/*o 1° comidaProdutos é uma props que  meio que cria uma 
             variável com esse nome, e o seu valor é um objeto, que é comidaProdutos da linha 12 */}
         </div>
         <div className="box">
-          <SapatoCompenent sapatoProdutos={sapatoProdutos}/>
+          <SapatoCompenent adicionarFavoritos={adicionarFavoritos} sapatoProdutos={sapatoProdutos}/>
         </div>
         <div className="box">
-          <SalgadoCompenent salgadoProdutos={salgadoProdutos}/>
+          <SalgadoCompenent adicionarFavoritos={adicionarFavoritos} salgadoProdutos={salgadoProdutos}/>
+        </div>
+        <div>
+          <BebidaComponent adicionarFavoritos={adicionarFavoritos} bebidaProdutos={bebidaProdutos}/>
+        </div>
+        <div>
+          <BrinquedoComponent adicionarFavoritos={adicionarFavoritos} brinquedoProdutos={brinquedoProdutos}/>
+        </div>
+        <div>
+            <InformaticaComponent adicionarFavoritos={adicionarFavoritos} informaticaProdutos={informaticaProdutos}/>
         </div>
     </div>
   );

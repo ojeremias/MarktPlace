@@ -1,4 +1,4 @@
-export default function BebidaComponent(){
+export default function InformaticaComponent(){
     return(
 
         <div> 
