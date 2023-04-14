@@ -1,16 +1,17 @@
 import React from "react";
 
-export default function DenunciadoComponent({denunciado}){
-    if(denunciado.length === 0){
-        return
-    }
+export default function DenuciadoComponent({denuciado}){
 
-    console.log();
     return( 
         <div>
-            <div>
-                <p>Produto: {denunciado[0].nome}</p>
-            </div>
+            <h1>Denunciados!</h1>
+            {
+                denuciado.map((produto) =>{
+                    return <div>
+                        <p>{produto.nome} {produto.valor}</p>    
+                    </div>
+                })
+            }
         </div>
     )
 }

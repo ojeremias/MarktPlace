@@ -10,6 +10,13 @@ App{
 
   border: 1px solid blue;
 }
+.box-favorite{
+    min-height: 300px;
+    min-width: 90%;
+    padding: 20px;
+    margin: 20px;
+  
+}
 
 .box{
   flex: 1;

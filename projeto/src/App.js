@@ -6,6 +6,7 @@ import BebidaComponent from './components/ComponentBebida/BebidaComponent'
 import SalgadoCompenent from './components/ComponentSalgado/SalgadoComponent';
 import MaquiagemComponent from './components/ComponentMaquiagem/ComponentMaquiagem';
 import FavoritoComponent from './components/ComponentFavorito/FavoritoComponent';
+import DenuciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
 import InformaticaComponent from './components/ComponentInformatica/InformaticaComponent'
 // import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
 import BrinquedoComponent from './components/ComponentBrinquedo/BrinquedoComponent'
@@ -145,12 +146,19 @@ function App() {
 
     const [favoritos, setFavoritos]=useState([])
 
-    function adicionarFavoritos(produto){ //O parâmetro passado será informa pelos componentes.
+    function adicionarFavoritos(produto){ //O parâmetro passado será informado pelos componentes.
       //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.
       console.log(produto);
       setFavoritos([...favoritos, produto]);
       
     } 
+
+    const [denunciado, setDenunciado] = useState([]);
+
+    function adicionarDenuciado(produto){
+      console.log(produto);
+      setDenunciado([...denunciado, produto])
+    }
 
     // const [denunciado, setDenunciado]=useState([])
 
@@ -162,30 +170,23 @@ function App() {
 
     return (
     <div className="App">
-        <div>
+        <div className='box'>
           <FavoritoComponent favoritos={favoritos}/>
         </div>
-        <div>
-          {/* <DenunciadoComponent denunciado={denunciado}/> */}
-        </div>
-          {/* props:{
-            comidaProdutos:[{
-              nome: 12321
-              preco
-            },
-            {
 
-            }
-          }] */}
+        <div>
+          <DenuciadoComponent denuciado={denunciado}/>
+        </div>
+          
         <div className="box">
-          <ComidaComponent  adicionarDenunciadoadicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/> {/*o 1° comidaProdutos é uma props que  meio que cria uma 
+          <ComidaComponent  adicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/> {/*o 1° comidaProdutos é uma props que  meio que cria uma 
             variável com esse nome, e o seu valor é um objeto, que é comidaProdutos da linha 12 */}
         </div>
         <div className="box">
           <SapatoCompenent adicionarFavoritos={adicionarFavoritos} sapatoProdutos={sapatoProdutos}/>
         </div>
         <div className="box">
-          <SalgadoCompenent adicionarFavoritos={adicionarFavoritos} salgadoProdutos={salgadoProdutos}/>
+          <SalgadoCompenent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} salgadoProdutos={salgadoProdutos}/>
         </div>
         <div>
           <BebidaComponent adicionarFavoritos={adicionarFavoritos} bebidaProdutos={bebidaProdutos}/>
