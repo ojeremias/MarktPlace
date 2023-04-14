@@ -170,13 +170,16 @@ function App() {
 
     return (
     <div className="App">
+
+      <div className='favoritosDenunciados'>
         <div className='box'>
           <FavoritoComponent favoritos={favoritos}/>
         </div>
 
-        <div>
+        <div className='box'>
           <DenuciadoComponent denuciado={denunciado}/>
         </div>
+      </div>
           
         <div className="box">
           <ComidaComponent  adicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/> {/*o 1° comidaProdutos é uma props que  meio que cria uma 
