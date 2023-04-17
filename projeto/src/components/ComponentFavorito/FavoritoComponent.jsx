@@ -4,7 +4,7 @@ export default function FavoritoComponent({favoritos}){ //o desconstrutor descon
 
     return(
         <div className="box-favorite">
-            <h1>Favorito</h1>
+            <h1 className="titulo-favorito">Favorito!</h1>
             {
                 favoritos.map((produto)=>{
                     return <div>

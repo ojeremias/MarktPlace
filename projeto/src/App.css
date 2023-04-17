@@ -11,13 +11,28 @@ App{
   border: 1px solid blue;
 }
 .box-favorite{
-    min-height: 300px;
+    height: 300px;
     min-width: 90%;
     padding: 20px;
-    margin: 20px;
-  
+    margin: 20px; 
+    overflow-y: scroll;
+}
+.box-denunciados{
+  height: 300px;
+  min-width: 90%;
+  padding: 20px;
+  margin: 20px;
+  overflow-y: scroll
+}
+.titulo-favorito{
+  text-align: center;
+}
+.titulo-denunciados{
+  text-align: center; 
 }
 .favoritosDenunciados{
+  overflow: auto;
+  border: 3px;
   display: flex;
   flex-direction: row;
 }

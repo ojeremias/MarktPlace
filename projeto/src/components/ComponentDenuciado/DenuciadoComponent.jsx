@@ -3,8 +3,8 @@ import React from "react";
 export default function DenuciadoComponent({denuciado}){
 
     return( 
-        <div>
-            <h1>Denunciados!</h1>
+        <div className="box-denunciados">
+            <h1 className="titulo-denunciados">Denunciados!</h1>
             {
                 denuciado.map((produto) =>{
                     return <div>
