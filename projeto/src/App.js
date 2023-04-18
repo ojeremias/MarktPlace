@@ -232,7 +232,7 @@ function App() {
           <BrinquedoComponent adicionarFavoritos={adicionarFavoritos} brinquedoProdutos={brinquedoProdutos}/>
         </div>
         <div>
-            <InformaticaComponent adicionarFavoritos={adicionarFavoritos} informaticaProdutos={informaticaProdutos}/>
+            <InformaticaComponent adicionarFavoritos={adicionarFavoritos} produtos={informaticaProdutos}/>
         </div>
 
             <div>
