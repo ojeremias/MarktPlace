@@ -10,8 +10,11 @@ import DenuciadoComponent from './components/ComponentDenuciado/DenuciadoCompone
 import InformaticaComponent from './components/ComponentInformatica/InformaticaComponent'
 // import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
 import BrinquedoComponent from './components/ComponentBrinquedo/BrinquedoComponent'
+import TecnologiaComponent from './components/ComponentTecnologia/TecnologiaComponent';
+
 
 function App() {
+
 
   const maquiagemProdutos=[
     {
@@ -117,6 +120,36 @@ function App() {
         preco: 10.00
       }
     ]
+
+    const tecnologiaProdutos = [
+      {
+        id: 1, 
+        nome: "Fone",
+        valor: 15.99
+      },
+      {
+        id: 2, 
+        nome: "Celular Positivo",
+        valor: 500
+      },
+      {
+        id: 3,
+        nome: "Gabinete",
+        valor: 250
+      },
+      {
+        id: 4,
+        nome: "Impressora 3d",
+        valor: 3500.99
+      },
+      {
+        id: 5,
+        nome: "Kit Arduino",
+        valor: 75.99
+      }
+
+  ]
+
     const salgadoProdutos = [{
       id: 1,
       nome: "Coxinha", 
@@ -142,7 +175,8 @@ function App() {
       nome: "Pastel de Carne", 
       valor: 3.5,
     }
-  ];
+  ]
+
 
     const [favoritos, setFavoritos]=useState([])
 
@@ -200,6 +234,11 @@ function App() {
         <div>
             <InformaticaComponent adicionarFavoritos={adicionarFavoritos} informaticaProdutos={informaticaProdutos}/>
         </div>
+
+            <div>
+              <TecnologiaComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} tecnologiaProdutos={tecnologiaProdutos}/>
+            </div>
+
         <div className="box">
           <MaquiagemComponent maquiagemProdutos={maquiagemProdutos}/>
         </div>
