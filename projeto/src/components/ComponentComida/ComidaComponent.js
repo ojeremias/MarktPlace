@@ -1,28 +1,30 @@
 import React from 'react'
 
-export default function ComidaComponent(props) {
+function  ComidaComponent ({ comidaProdutos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}) {
 
-    if(props.comidaProdutos === 0){
-        return
-    }
-  
   return (
+    <div className="box-produto">
+        <h1>Comida - Felipe</h1>
+        {
+            comidaProdutos.map(p =>
+                <div key={p.id}>
+                    {p.nome} 
+                    <div>
+                    Preço: R${p.preco}
+                    </div>
+                    <button onClick={()=>{
+                        adicionarFavoritos(p);
+                        console.log(p)
+                    }}>Adicionar</button>
 
-    <div>
-      {
-        props.comidaProdutos[0].nome
-      }
-      <br></br>
-      {
-        props.comidaProdutos[1].nome
-      }
-      <br></br>
-      {
-        props.comidaProdutos[2].nome
-      }
-      <br></br>
-
+                    <button onClick={()=>{
+                        adicionarDenuciado(p);
+                    }}>Denuciar</button>
+                </div>
+            )
+        }
     </div>
- 
-  )
+)
 }
+
+export default ComidaComponent

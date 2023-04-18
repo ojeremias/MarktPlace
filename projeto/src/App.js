@@ -36,25 +36,50 @@ function App() {
   const comidaProdutos=[
     {
       id:1,
-      nome: 'batata-frita',
-      preco: '4.00'
+      nome: 'Batata-frita',
+      preco: 4.00
     },
     {
       id:2,
-      nome:'sanduíche',
+      nome:'Sanduíche',
       preco: 40.00,
       
     },
     {
       id:3,
-      nome: 'lasanha',
+      nome: 'Lasanha',
       preco: 50.00
+    },
+    {
+      id:4,
+      nome: 'Pizza',
+      preco: 25.00
+    },
+    {
+      id:5,
+      nome:'Cachorro-quente',
+      preco:15.00
+    },
+    {
+      id:6,
+      nome: 'Tacos',
+      preco: 30.00
+    },
+    {
+      id:7,
+      nome:'Nachos',
+      preco: 25.00
+    },
+    {
+      id:8,
+      nome:'Burrito',
+      preco: 35.00
     }
   ]
   const sapatoProdutos=[
     {
       id: 1,
-      nome:'Nike Dank',
+      nome:'Nike Dunk',
       preco: 120.00
     },
     {
@@ -216,8 +241,7 @@ function App() {
       </div>
           
         <div className="box">
-          <ComidaComponent  adicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/> {/*o 1° comidaProdutos é uma props que  meio que cria uma 
-            variável com esse nome, e o seu valor é um objeto, que é comidaProdutos da linha 12 */}
+          <ComidaComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/>
         </div>
         <div className="box">
           <SapatoCompenent adicionarFavoritos={adicionarFavoritos} sapatoProdutos={sapatoProdutos}/>
