@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function InformaticaComponent({produtos, categoria, onAdd}){
+export default function InformaticaComponent({produtos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}){
     return(
 
         <div className='containerInformatica'>
@@ -19,7 +19,14 @@ export default function InformaticaComponent({produtos, categoria, onAdd}){
           <div>
             Preço: R${p.preco}
           </div> 
+          <button onClick={()=>{
+                            adicionarFavoritos(p);
+                            console.log(p)
+                        }}>Adicionar</button>
 
+                        <button onClick={()=>{
+                            adicionarDenuciado(p);
+                        }}>Denuciar</button>
           </div>
         )
     }
