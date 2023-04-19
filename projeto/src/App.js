@@ -244,7 +244,7 @@ function App() {
           <ComidaComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/>
         </div>
         <div className="box">
-          <SapatoCompenent adicionarFavoritos={adicionarFavoritos} sapatoProdutos={sapatoProdutos}/>
+          <SapatoCompenent adicionarFavoritos={adicionarFavoritos}adicionarDenuciado={adicionarDenuciado} sapatoProdutos={sapatoProdutos}/>
         </div>
         <div className="box">
           <SalgadoCompenent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} salgadoProdutos={salgadoProdutos}/>
@@ -256,7 +256,7 @@ function App() {
           <BrinquedoComponent adicionarFavoritos={adicionarFavoritos} adicionarDenuciado={adicionarDenuciado} brinquedoProdutos={brinquedoProdutos}/>
         </div>
         <div>
-            <InformaticaComponent adicionarFavoritos={adicionarFavoritos} produtos={informaticaProdutos}/>
+            <InformaticaComponent adicionarFavoritos={adicionarFavoritos} adicionarDenuciado={adicionarDenuciado} produtos={informaticaProdutos}/>
         </div>
 
             <div>
