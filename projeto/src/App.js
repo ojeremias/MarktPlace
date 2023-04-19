@@ -202,8 +202,7 @@ function App() {
     }
   ]
 
-
-    const [favoritos, setFavoritos]=useState([])
+  const [favoritos, setFavoritos]=useState([])
 
     function adicionarFavoritos(produto){ //O parâmetro passado será informado pelos componentes.
       //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.

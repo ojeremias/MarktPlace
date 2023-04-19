@@ -2,7 +2,7 @@ import React from 'react'
 export default function MaquiagemCompenent(props) {
     console.log(props)
   return (
-    <div class="">
+    <div className="">
         {props.maquiagemProdutos[0].nome}, {props.maquiagemProdutos[1].nome}, {props.maquiagemProdutos[2].nome}
     </div>
   )
