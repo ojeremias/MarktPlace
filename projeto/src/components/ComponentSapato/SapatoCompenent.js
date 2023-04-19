@@ -8,10 +8,14 @@ import React from 'react'
 
           sapatoProdutos.map(p => 
             <div key={p.id}>
-              {p.nome}
-              <div>
+              <div className="cardInfor">
+
+              <img src='{}' alt='image de tenis'></img>
+              Nome:{p.nome}
               R$:{p.preco}
+
               </div>
+
               <button onClick={()=>{
                adicionarFavoritos(p);
                 console.log(p)
