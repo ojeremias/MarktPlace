@@ -12,7 +12,7 @@ function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavorit
 
     return (
         <div className="box-produto">
-            <h1>akdjsak</h1>
+            <h1>Salgados</h1>
             {
                 salgadoProdutos.map(p =>
                     <div key={p.id}>

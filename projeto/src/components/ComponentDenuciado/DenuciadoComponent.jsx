@@ -7,7 +7,7 @@ export default function DenuciadoComponent({denuciado}){
             <h1 className="titulo-denunciados">Denunciados!</h1>
             {
                 denuciado.map((produto) =>{
-                    return <div>
+                    return <div key={produto.id}>
                         <p>{produto.nome} {produto.valor}</p>    
                     </div>
                 })
