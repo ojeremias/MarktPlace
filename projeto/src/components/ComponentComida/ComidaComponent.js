@@ -3,12 +3,17 @@ import React from 'react'
 function  ComidaComponent ({ comidaProdutos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}) {
 
   return (
-    <div className="box-produto">
+    <div className="containerComida">
         <h1>Comida - Felipe</h1>
         {
             comidaProdutos.map(p =>
-                <div key={p.id}>
+                <div key={p.id} className="containerProduto" >
+                    
                     {p.nome} 
+                    
+                    <div>
+                    <img src="" alt ='Img comida'></img>
+                    </div>
                     <div>
                     Preço: R${p.preco}
                     </div>
