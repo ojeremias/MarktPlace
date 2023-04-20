@@ -14,7 +14,7 @@ export default function InformaticaComponent({produtos, categoria, onAdd, adicio
           Produto: {p.nome}
           </div>
           <div>
-          <img src='' alt='Img Antonio'></img>
+          <img src={p.img} alt='Img Antonio'></img>
           </div>
           <div>
             Preço: R${p.preco}
