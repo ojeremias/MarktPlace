@@ -12,7 +12,7 @@ function  ComidaComponent ({ comidaProdutos, categoria, onAdd, adicionarFavorito
                     <div id='nome' >{p.nome}</div>
                     
                 <div>
-                    <img src="" alt ='comida'></img>
+                    <img src="https://www.sabornamesa.com.br/media/k2/items/cache/377829b055e89e3afb894e7528a10996_XL.jpg" alt ='comida'></img>
                     </div>
                     <div id='preco'>
                     Preço: R${p.preco}

@@ -42,7 +42,7 @@ App{
 }
 h1{
   font-family: sans-serif;
-  justify-content: center;
+  text-align: center;
 }
   .containerComida{
     /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -52,8 +52,8 @@ h1{
      background-color: white;
      padding: 2px 16px;
     /* border-radius: 10px; */
-    /* flex-direction: row;
-    display: flex; */
+     flex-direction: inherit;
+     display: flex; 
   }
   .containerProduto:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -84,4 +84,8 @@ h1{
     border-radius: 5px;
     font-style: italic;
     padding: 5px 10px 5px 10px;
+  }
+  img{
+    width: 130px ;
+    height: 130px;
   }
