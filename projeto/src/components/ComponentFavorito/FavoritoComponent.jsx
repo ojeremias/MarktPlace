@@ -9,6 +9,7 @@ export default function FavoritoComponent({favoritos}){ //o desconstrutor descon
                 favoritos.map((produto)=>{
                     return <div key={produto.id}>
                         <p>{produto.nome} {produto.valor}</p>
+                        <p> <img src={produto.img} alt="imgDoProduto" /></p>
                     </div>
             })}      
         </div>
