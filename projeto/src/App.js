@@ -80,17 +80,20 @@ function App() {
     {
       id: 1,
       nome:'Nike Dunk',
-      preco: 120.00
+      preco: 120.00,
+      img:'./img/nike1.webp'
     },
     {
       id: 2,
-      nome: 'rasteirinha',
-      preco: 60.00
+      nome: 'TR 9 Feminino',
+      preco: 60.00,
+      img:'./img/nike2.jpg'
     },
     {
       id: 3,
       nome: 'Air force',
-      preco: 150.00
+      preco: 150.00,
+      img:'./img/nike3.jpg'
     },
   ]
     const bebidaProdutos=[
