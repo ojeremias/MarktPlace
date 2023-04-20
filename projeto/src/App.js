@@ -19,18 +19,18 @@ function App() {
   const maquiagemProdutos=[
     {
       id:1,
-      nome: 'rimel',
-      preco: 12.00
+      nome: 'base',
+      preco: 55.90
     },
     {
       id:2,
-      nome:'batom',
-      preco: 10.00
+      nome:'corretivo',
+      preco: 38.40
     },
     {
       id:3,
       nome:'blush',
-      preco:8.50
+      preco:29.90
     },
   ]
   const comidaProdutos=[

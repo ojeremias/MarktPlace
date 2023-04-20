@@ -1,9 +1,32 @@
 import React from 'react'
-export default function MaquiagemCompenent(props) {
-    console.log(props)
+ function MaquiagemCompenent({maquiagemProdutos, adicionarFavoritos,adicionarDenuciado}) {
+  
   return (
-    <div className="">
-        {props.maquiagemProdutos[0].nome}, {props.maquiagemProdutos[1].nome}, {props.maquiagemProdutos[2].nome}
+
+    <div className="box-produto">
+      <h1 id='h1'>Maquiagem-Vitória</h1>
+      {
+        maquiagemProdutos.map(p =>
+          <div key={p.id}>
+              <div className="cardInfor">
+              Nome:{p.nome}
+              R$:{p.preco}
+
+              </div>
+              <button onClick={()=>{
+               adicionarFavoritos(p);
+                console.log(p)
+              }}>Adicionar</button>
+
+              <button onClick={()=>{
+                adicionarDenuciado(p);
+              }}>Denuciar</button>
+              </div>  
+
+        )
+      }
+       
     </div>
   )
 }
+export default MaquiagemCompenent
