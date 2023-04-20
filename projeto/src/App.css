@@ -72,6 +72,7 @@ h1{
     font-weight: bold;
   }
   #btnadd{
+    cursor: pointer;
     background-color: rgba(41, 79, 190, 0.905);
     border: none;
     border-radius: 5px;
@@ -79,6 +80,7 @@ h1{
     padding: 5px 10px 5px 10px;
   }
   #btnden{
+    cursor: pointer;
     background-color: rgb(247, 13, 13);
     border: none;
     border-radius: 5px;
