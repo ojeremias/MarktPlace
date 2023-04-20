@@ -13,8 +13,8 @@ export default function InformaticaComponent({produtos, categoria, onAdd, adicio
           <div>
           Produto: {p.nome}
           </div>
-          <div>
-          <img src={p.img} alt='Img Antonio' width={100} height={100}></img>
+          <div className='telaInformaticaImg'>
+          <img className='img' src={p.img} alt='Img Antonio' ></img>
           </div>
           <div>
             Preço: R${p.preco}
