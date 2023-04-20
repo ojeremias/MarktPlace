@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './InformaticaComponent.css'
 
 export default function InformaticaComponent({produtos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}){
     return(
