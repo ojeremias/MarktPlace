@@ -40,21 +40,48 @@ App{
   flex: 1;
   border: 1px solid green;
 }
+h1{
+  font-family: sans-serif;
+  justify-content: center;
+}
   .containerComida{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 40%;
-    
-    border-radius: 10px;
-    flex-direction: row;
-    display: flex;
+     */
+     background-color: white;
+     padding: 2px 16px;
+    /* border-radius: 10px; */
+    /* flex-direction: row;
+    display: flex; */
   }
   .containerProduto:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 12%;
+    background-color: rgb(255, 166, 0);
   }
   .containerProduto{
-    border-style: solid;
+    /* border-style: solid; */
+    border-radius: 10px;
   }
-  .containerComida{
-    padding: 2px 16px;
+  #nome{
+    font-weight: bold;
+  }
+  #preco{
+    font-weight: bold;
+  }
+  #btnadd{
+    background-color: rgba(41, 79, 190, 0.905);
+    border: none;
+    border-radius: 5px;
+    font-style: italic ;
+    padding: 5px 10px 5px 10px;
+  }
+  #btnden{
+    background-color: rgb(247, 13, 13);
+    border: none;
+    border-radius: 5px;
+    font-style: italic;
+    padding: 5px 10px 5px 10px;
   }
