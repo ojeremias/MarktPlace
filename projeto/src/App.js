@@ -122,13 +122,13 @@ function App() {
         id:2,
         nome:'Mac Book',
         preco: 15000.00,
-        img: '',
+        img: './img/macbook.png',
       },
       {
         id:3,
         nome:'Notebook positivo',
         preco: 3500.00,
-        img: ''
+        img: './img/notebookPositivo.png'
       },
     ]
     const brinquedoProdutos=[
