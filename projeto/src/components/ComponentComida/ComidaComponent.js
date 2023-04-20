@@ -4,25 +4,25 @@ function  ComidaComponent ({ comidaProdutos, categoria, onAdd, adicionarFavorito
 
   return (
     <div className="containerComida">
-        <h1>Comida - Felipe</h1>
+        <h1 id='h1'>Comida - Felipe</h1>
         {
             comidaProdutos.map(p =>
                 <div key={p.id} className="containerProduto" >
                     
-                    {p.nome} 
+                    <div id='nome' >{p.nome}</div>
                     
-                    <div>
+                <div>
                     <img src="" alt ='comida'></img>
                     </div>
-                    <div>
+                    <div id='preco'>
                     Preço: R${p.preco}
                     </div>
-                    <button onClick={()=>{
+                    <button id ='btnadd' onClick={()=>{
                         adicionarFavoritos(p);
                         console.log(p)
                     }}>Adicionar</button>
 
-                    <button onClick={()=>{
+                    <button id='btnden' onClick={()=>{
                         adicionarDenuciado(p);
                     }}>Denuciar</button>
                 </div>
