@@ -115,17 +115,20 @@ function App() {
       {
         id: 1,
         nome: 'RTX 4090 TI',
-        preco: 14000.00
+        preco: 14000.00,
+        img: './img/rtx4090ti.png'
       },
       {
         id:2,
         nome:'Mac Book',
-        preco: 15000.00
+        preco: 15000.00,
+        img: '',
       },
       {
         id:3,
         nome:'Notebook positivo',
-        preco: 3500.00
+        preco: 3500.00,
+        img: ''
       },
     ]
     const brinquedoProdutos=[
