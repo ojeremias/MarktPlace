@@ -19,14 +19,14 @@ export default function InformaticaComponent({produtos, categoria, onAdd, adicio
           <div>
             Preço: R${p.preco}
           </div> 
-          <button onClick={()=>{
+          <div className='button' onClick={()=>{
                             adicionarFavoritos(p);
                             console.log(p)
-                        }}>Adicionar</button>
+                        }}>Adicionar</div>
 
-                        <button onClick={()=>{
+                        <div className='button' onClick={()=>{
                             adicionarDenuciado(p);
-                        }}>Denuciar</button>
+                        }}>Denuciar</div>
           </div>
         )
     }
