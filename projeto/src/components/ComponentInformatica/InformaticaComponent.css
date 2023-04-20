@@ -26,7 +26,7 @@
   .telaInformaticaCard{
     padding: 20px;
     margin: 8px;
-    width: 200px;
+    width: 240px;
     height: 250px;
     border-radius: 22px;
     /* border: 1px solid #ff0000; */
@@ -35,21 +35,31 @@
   
   }
   .telaInformaticaCard:hover{
-    cursor: pointer;
+    cursor: default;
     transform: scale(1.05);
     box-shadow: 0px 2px 4px 4px rgb(124, 0, 0);
     /* margin: 10px; */
-  }
+}
   .telaInformaticaImg  img{
   border-radius: 12px;
   margin: 10px;
-  width: 135px;
+  width: 140px;
   height: 120px;
   }
 
+  .button{
+    background-color: #000;
+    margin: 3px;
+    padding: 5px;
+    height: 20px;
+    border-radius: 6px;
+  }
+  .button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #004030;
+
+}
+
   /* Antonio css Fim */
 
-  img{
-    width: 130px ;
-    height: 130px;
-  }
