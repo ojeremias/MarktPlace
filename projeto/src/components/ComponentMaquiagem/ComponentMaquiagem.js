@@ -21,8 +21,7 @@ import React from 'react'
               <button onClick={()=>{
                 adicionarDenuciado(p);
               }}>Denuciar</button>
-              </div>  
-
+              </div>
         )
       }
        

@@ -264,10 +264,12 @@ function App() {
             <div>
               <TecnologiaComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} tecnologiaProdutos={tecnologiaProdutos}/>
             </div>
+      
+            <div>
+              <MaquiagemComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} maquiagemProdutos={maquiagemProdutos}/>
+            </div>
 
-        <div className="box">
-          <MaquiagemComponent maquiagemProdutos={maquiagemProdutos}/>
-        </div>
+        
     </div>
   );
 }
