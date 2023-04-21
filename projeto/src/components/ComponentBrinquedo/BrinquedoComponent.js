@@ -5,7 +5,7 @@ function BrinquedoComponent ({ brinquedoProdutos, adicionarFavoritos, adicionarD
 const img = ['', './img/quebracabeca.svg', './img/domino.svg', './img/uno.svg',];
     return (
         <div className="gallery">
-            <div className="header-brinquedo"><h1>Brinquedos - Leonardo </h1></div> 
+            <h1>Brinquedos - Leonardo</h1>
             {
                 brinquedoProdutos.map(p =>
                     <div key={p.id} className="content">
