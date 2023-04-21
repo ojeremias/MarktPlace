@@ -1,33 +1,35 @@
 import React from "react";
 
 function BrinquedoComponent ({ brinquedoProdutos, adicionarFavoritos, adicionarDenuciado}) {
-
-const img = ['', './img/quebracabeca.jpg', './img/domino.jpg', './img/uno.jpg',];
+    
+const img = ['', './img/quebracabeca.svg', './img/domino.svg', './img/uno.svg',];
     return (
-        <div className="container-brinquedo">
-            <span className="header-brinquedo"><h1>Brinquedos - Leonardo </h1></span> 
+        <div className="gallery">
+            <div className="header-brinquedo"><h1>Brinquedos - Leonardo </h1></div> 
             {
                 brinquedoProdutos.map(p =>
-                    <div key={p.id} className="cards-brinquedo">
-                        <div className="card-brinquedo">
-
+                    <div key={p.id} className="content">
                         <div className="imgBrinquedo">
                             <img src={img[p.id]}></img>                        
                         </div>
 
                         <div className="namePrice">
                             <h3>{p.nome}</h3>
-                            <p>R${p.preco}</p>
+                            <span><h6>R${p.preco}</h6></span>
                         </div>
 
-                        <button onClick={()=>{
-                            adicionarFavoritos(p);
-                            console.log(p)
-                        }}>Adicionar</button>
-
-                        <button onClick={()=>{
-                            adicionarDenuciado(p);
-                        }}>Denuciar</button>
+                        <div className="buy">
+                            <div className="adicionar">
+                                <button onClick={()=>{
+                                adicionarFavoritos(p);
+                                console.log(p)
+                                }}>Adicionar</button>
+                            </div>
+                            <div className="denunciar">
+                                <button onClick={()=>{
+                                adicionarDenuciado(p);
+                                }}>Denuciar</button>
+                            </div>
                         </div>
                     </div>
                 )
