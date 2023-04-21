@@ -3,30 +3,34 @@ import React from "react";
 
 function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}) {
 
-const img = [ '', './img/coxinha.png', './img/miniCoxinha.png', './img/enroladinho.png', './img/pastelDeQueijo.png', './img/pastelDeCarne.png']
+const img = [ './img/coxinha.png', './img/miniCoxinha.png', './img/enroladinho.png', './img/pastelDeQueijo.png', './img/pastelDeCarne.png']
 
     return (
         <div className="box-produto">
-            <h1>Salgados</h1>
-            {
+            <h1 id="tituloSalgado">Salgados</h1>
+            <table>
+                <tr>{
                 salgadoProdutos.map(p =>
-                    <div key={p.id}>
+                    <td>
+                    <div id="cardSalgado" key={p.id}>
                         {p.nome}<br/>
                     <div>
-                    <img src={img[p.id]} height={100} width={100}></img>
+                    <img id='imgSalgado' src={img[p.id]}></img>
                     </div>
                         {p.valor}<br/>
-                        <button onClick={()=>{
+                        <button id='btnFavSalgado' onClick={()=>{
                             adicionarFavoritos(p);
                             console.log(p)
-                        }}>Adicionar</button><br/>
+                        }}>Favoritar</button><br/>
 
-                        <button onClick={()=>{
+                        <button id='btnDenSalgado' onClick={()=>{
                             adicionarDenuciado(p);
                         }}>Denuciar</button>
                     </div>
+                    </td>
                 )
-            }
+            }</tr>
+            </table>
         </div>
     )
 }

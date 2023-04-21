@@ -182,30 +182,30 @@ function App() {
   ]
 
     const salgadoProdutos = [{
-      id: 1,
+      id: 0,
       nome: "Coxinha", 
-      valor: 3.5,
+      valor: 'R$: 3,50',
+    },
+    {
+      id: 1,
+      nome: "Mini Coxinha", 
+      valor: 'R$: 0,25',
     },
     {
       id: 2,
-      nome: "Mini Coxinha", 
-      valor: 0.25,
+      nome: "Enroladinho", 
+      valor: 'R$: 3,50',
     },
     {
       id: 3,
-      nome: "Enroladinho", 
-      valor: 3.5,
+      nome: "Pastel de Queijo", 
+      valor: 'R$: 3,50',
     },
     {
       id: 4,
-      nome: "Pastel de Queijo", 
-      valor: 3.5,
-    },
-    {
-      id: 5,
       nome: "Pastel de Carne", 
-      valor: 3.5,
-    }
+      valor: 'R$: 3,50',
+    },
   ]
 
   const [favoritos, setFavoritos]=useState([])
