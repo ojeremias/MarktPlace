@@ -1,4 +1,5 @@
 import React from "react";
+import './Brinquedo.css'
 
 function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDenuciado,}) {
   const img = [ "", "./img/quebracabeca.svg", "./img/domino.svg", "./img/uno.svg",];
