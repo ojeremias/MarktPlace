@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import './components/ComponentBrinquedo/Brinquedo.css';
 import ComidaComponent from './components/ComponentComida/ComidaComponent';
 import SapatoCompenent from './components/ComponentSapato/SapatoCompenent';
 import BebidaComponent from './components/ComponentBebida/BebidaComponent'
