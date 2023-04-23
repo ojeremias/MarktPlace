@@ -185,26 +185,31 @@ function App() {
       id: 0,
       nome: "Coxinha", 
       valor: 'R$: 3,50',
+      img: './img/coxinha.png',
     },
     {
       id: 1,
       nome: "Mini Coxinha", 
       valor: 'R$: 0,25',
+      img: './img/miniCoxinha.png',
     },
     {
       id: 2,
       nome: "Enroladinho", 
       valor: 'R$: 3,50',
+      img: './img/enroladinho.png',
     },
     {
       id: 3,
       nome: "Pastel de Queijo", 
       valor: 'R$: 3,50',
+      img: './img/pastelDeQueijo.png',
     },
     {
       id: 4,
       nome: "Pastel de Carne", 
       valor: 'R$: 3,50',
+      img: './img/pastelDeCarne.png',
     },
   ]
 

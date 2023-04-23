@@ -3,7 +3,6 @@ import React from "react";
 
 function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}) {
 
-const img = [ './img/coxinha.png', './img/miniCoxinha.png', './img/enroladinho.png', './img/pastelDeQueijo.png', './img/pastelDeCarne.png']
 
     return (
         <div className="box-produto">
@@ -15,7 +14,7 @@ const img = [ './img/coxinha.png', './img/miniCoxinha.png', './img/enroladinho.p
                     <div id="cardSalgado" key={p.id}>
                         {p.nome}<br/>
                     <div>
-                    <img id='imgSalgado' src={img[p.id]}></img>
+                    <img id='imgSalgado' src={[p.img]}></img>
                     </div>
                         {p.valor}<br/>
                         <button id='btnFavSalgado' onClick={()=>{
