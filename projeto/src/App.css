@@ -144,3 +144,17 @@ h1{
   background-color: #FFFFFF;
   color: #C10000;
 }
+
+.tecnologia {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+#img-tecnologia {
+  /* justify-content: ; */
+  width: 250px;
+  height: 250px;
+}
+
