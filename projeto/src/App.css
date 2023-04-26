@@ -1,7 +1,9 @@
-App{
+.App{
   flex: 1;
   color: #fff;
-  background: #303030;
+  background: #5a5a5a;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
 }
 .box-produto{
   min-height: 300px;

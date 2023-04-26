@@ -213,6 +213,9 @@ function App() {
     },
   ]
 
+  /**
+   * TODO: REFATORAR
+   */
   const [favoritos, setFavoritos]=useState([])
   
   function adicionarFavoritos(produto){ //O parâmetro passado será informado pelos componentes.
