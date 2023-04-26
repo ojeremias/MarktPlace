@@ -6,7 +6,9 @@ function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDe
   return (
     <div className="gallery">
       <h1>Brinquedos - Leonardo</h1>
+      <div className="bcontent">
       {brinquedoProdutos.map((p) => (
+        
         <div key={p.id} className="content">
           <div className="imgBrinquedo">
             <img src={img[p.id]}></img>
@@ -39,6 +41,8 @@ function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDe
           </div>
         </div>
       ))}
+      </div>
+
     </div>
   );
 }
