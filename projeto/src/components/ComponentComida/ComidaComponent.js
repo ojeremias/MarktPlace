@@ -10,10 +10,13 @@ const img = ["", "./img/batata frita.jpg", "./img/sanduiche.jpg", "./img/lasanha
         {
             comidaProdutos.map(p =>
                 <div key={p.id} className="containerProduto" >
+                <div className='card'>
                     
-                    <div id='nome' >{p.nome}</div>
+                    <div id='nome' >
+                        {p.nome}
                     
-                <div>
+                    </div>
+                    
                     <img src={img[p.id]} alt ='comida'></img>
                     </div>
                     <div id='preco'>
