@@ -4,33 +4,40 @@ import React from 'react'
   return (
 
     <div className="box-produto">
-      <h1 id='h1'>Maquiagem-Vitória</h1>
+      <h1 id='h1'>Maquiagem - Vitória</h1>
+      <div className="maqTela">
       {
         maquiagemProdutos.map(p =>
-          <div key={p.id}>
-              <div className="cardInfor">
-              Nome:{p.nome}
-              R$:{p.preco}
+          <div key={p.id} className="maqTela">
 
-          <div className='jf-tecnologia'>
-          <img className='img' src={p.img} ></img>
-          </div>
-
+            <div className='maqtelaImg'>
+              <img className='img' src={p.img}></img>
               </div>
-              <button onClick={()=>{
-               adicionarFavoritos(p);
+
+
+              <div className='cardInfor'>
+               {p.nome}
+              </div>
+
+              <div className='cardInfor'>
+              R$ {p.preco}
+              </div>
+
+              <button className='maqBotao' onClick={()=>{
+                adicionarFavoritos(p);
                 console.log(p)
               }}>Adicionar</button>
 
-              <button onClick={()=>{
+             <button className='maqBotao' onClick={()=>{
                 adicionarDenuciado(p);
               }}>Denuciar</button>
               </div>
-
         )
       }
        
     </div>
+      </div>
+      
   )
 }
 export default MaquiagemCompenent
