@@ -2,6 +2,8 @@ import React from 'react'
 
 function  ComidaComponent ({ comidaProdutos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}) {
 
+const img = ["", "./img/batata frita.jpg", "./img/sanduiche.jpg", "./img/lasanha.jpg", "./img/pizza.jpg", "./img/cachorro-quente.png", "./img/tacos.jpg", "./img/nachos.png", "./img/burritos.jpg"]
+
   return (
     <div className="containerComida">
         <h1 id='h1'>Comida - Felipe</h1>
@@ -12,7 +14,7 @@ function  ComidaComponent ({ comidaProdutos, categoria, onAdd, adicionarFavorito
                     <div id='nome' >{p.nome}</div>
                     
                 <div>
-                    <img src="https://www.sabornamesa.com.br/media/k2/items/cache/377829b055e89e3afb894e7528a10996_XL.jpg" alt ='comida'></img>
+                    <img src={img[p.id]} alt ='comida'></img>
                     </div>
                     <div id='preco'>
                     Preço: R${p.preco}

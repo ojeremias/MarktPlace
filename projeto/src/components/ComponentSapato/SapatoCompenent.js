@@ -1,35 +1,61 @@
 import React from 'react'
- function SapatosCompenent({sapatoProdutos,categoria,onAdd, adicionarFavoritos,adicionarDenuciado}) {
-    
-  return (
-    <div className="box-produto">
-      <h1>Sapato roberto/clicia</h1>
-        {
+import "./sapatos.css"
+function SapatosCompenent({sapatoProdutos,categoria,onAdd, adicionarFavoritos,adicionarDenuciado}) {
+  
+ return (
+   <div className='sapConteiner'>
+     <h1>SAPATOS ROBERTO/CLICIA</h1>
+   <div className="sapTela">
+       {
 
-          sapatoProdutos.map(p => 
-            <div key={p.id}>
-              <div className="cardInfor">
 
-              <img src='{}' alt='image de tenis'></img>
-              Nome:{p.nome}
-              R$:{p.preco}
+         sapatoProdutos.map(p =>
+           <div key={p.id} className='sapTelaCard'>
+           
 
-              </div>
+             
 
-              <button onClick={()=>{
-               adicionarFavoritos(p);
-                console.log(p)
-              }}>Adicionar</button>
+               <div className='sapteladaImg' >
+                 <img className='img' src={p.img}></img>
+               </div>
 
-              <button onClick={()=>{
-                adicionarDenuciado(p);
-              }}>Denuciar</button>
-              </div>
+              
 
-              )
+             <div className='sapTexto' >
+             {p.nome}
+             </div>
 
-        }
-    </div>
-  )
+
+             <div className='sapTexto'>
+             R$:{p.preco}
+             </div>
+
+
+            
+              <div className='sapBotao' onClick={()=>{
+              adicionarFavoritos(p);
+               console.log(p)
+             }}>Adicionar </div>
+             
+
+             
+              <div className='sapBotao' onClick={()=>{
+               adicionarDenuciado(p);
+             }}>Denuciar</div>
+
+
+             </div>
+
+
+             
+
+
+             )
+
+
+            }
+            </div>
+   </div>
+ )
 }
 export default SapatosCompenent

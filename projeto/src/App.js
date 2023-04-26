@@ -19,18 +19,18 @@ function App() {
   const maquiagemProdutos=[
     {
       id:1,
-      nome: 'rimel',
-      preco: 12.00
+      nome: 'base',
+      preco: 55.90
     },
     {
       id:2,
-      nome:'batom',
-      preco: 10.00
+      nome:'corretivo',
+      preco: 38.40
     },
     {
       id:3,
       nome:'blush',
-      preco:8.50
+      preco:29.90
     },
   ]
   const comidaProdutos=[
@@ -80,17 +80,20 @@ function App() {
     {
       id: 1,
       nome:'Nike Dunk',
-      preco: 120.00
+      preco: 120.00,
+      img:'./img/nike1.webp'
     },
     {
       id: 2,
-      nome: 'rasteirinha',
-      preco: 60.00
+      nome: 'TR 9 Feminino',
+      preco: 60.00,
+      img:'./img/nike2.jpg'
     },
     {
       id: 3,
       nome: 'Air force',
-      preco: 150.00
+      preco: 150.00,
+      img:'./img/nike3.jpg'
     },
   ]
     const bebidaProdutos=[
@@ -179,30 +182,35 @@ function App() {
   ]
 
     const salgadoProdutos = [{
-      id: 1,
+      id: 0,
       nome: "Coxinha", 
-      valor: 3.5,
+      valor: 'R$: 3,50',
+      img: './img/coxinha.png',
+    },
+    {
+      id: 1,
+      nome: "Mini Coxinha", 
+      valor: 'R$: 0,25',
+      img: './img/miniCoxinha.png',
     },
     {
       id: 2,
-      nome: "Mini Coxinha", 
-      valor: 0.25,
+      nome: "Enroladinho", 
+      valor: 'R$: 3,50',
+      img: './img/enroladinho.png',
     },
     {
       id: 3,
-      nome: "Enroladinho", 
-      valor: 3.5,
+      nome: "Pastel de Queijo", 
+      valor: 'R$: 3,50',
+      img: './img/pastelDeQueijo.png',
     },
     {
       id: 4,
-      nome: "Pastel de Queijo", 
-      valor: 3.5,
-    },
-    {
-      id: 5,
       nome: "Pastel de Carne", 
-      valor: 3.5,
-    }
+      valor: 'R$: 3,50',
+      img: './img/pastelDeCarne.png',
+    },
   ]
 
   const [favoritos, setFavoritos]=useState([])
@@ -264,10 +272,12 @@ function App() {
             <div>
               <TecnologiaComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} tecnologiaProdutos={tecnologiaProdutos}/>
             </div>
+      
+            <div>
+              <MaquiagemComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} maquiagemProdutos={maquiagemProdutos}/>
+            </div>
 
-        <div className="box">
-          <MaquiagemComponent maquiagemProdutos={maquiagemProdutos}/>
-        </div>
+        
     </div>
   );
 }
