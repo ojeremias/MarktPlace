@@ -215,12 +215,18 @@ function App() {
 
   const [favoritos, setFavoritos]=useState([])
 
+  const[contador,setContador] = useState(0);
+
     function adicionarFavoritos(produto){ //O parâmetro passado será informado pelos componentes.
       //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.
       console.log(produto);
+      setContador(contador)
       setFavoritos([...favoritos, produto]);
       
     } 
+
+    
+
 
     const [denunciado, setDenunciado] = useState([]);
 
