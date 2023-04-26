@@ -12,6 +12,10 @@ import React from 'react'
               Nome:{p.nome}
               R$:{p.preco}
 
+          <div className='jf-tecnologia'>
+          <img className='img' src={p.img} ></img>
+          </div>
+
               </div>
               <button onClick={()=>{
                adicionarFavoritos(p);
@@ -22,6 +26,7 @@ import React from 'react'
                 adicionarDenuciado(p);
               }}>Denuciar</button>
               </div>
+
         )
       }
        

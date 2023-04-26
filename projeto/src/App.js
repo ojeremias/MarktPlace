@@ -213,7 +213,11 @@ function App() {
     },
   ]
 
+  /**
+   * TODO: REFATORAR
+   */
   const [favoritos, setFavoritos]=useState([])
+<<<<<<< HEAD
 
   const[contador,setContador] = useState(0);
 
@@ -221,9 +225,18 @@ function App() {
       //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.
       console.log(produto);
       setContador(contador)
+=======
+  
+  function adicionarFavoritos(produto){ //O parâmetro passado será informado pelos componentes.
+    //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.    
+    const favEncontrado = favoritos.find( f => f.id === produto.id);
+    if(!favEncontrado){
+>>>>>>> 03ae48c132edb9c9f5de0d8dd7720e5cc3f20869
       setFavoritos([...favoritos, produto]);
-      
-    } 
+    }else{
+      console.log("ja foi adicionado antes: "+ produto.nome)
+    }
+  } 
 
     
 
@@ -231,8 +244,13 @@ function App() {
     const [denunciado, setDenunciado] = useState([]);
 
     function adicionarDenuciado(produto){
-      console.log(produto);
-      setDenunciado([...denunciado, produto])
+      //console.log(produto);
+      const denEncontrado = denunciado.find(f => f.id === produto.id);
+      if(!denEncontrado){
+        setDenunciado([...denunciado, produto])
+      }else{
+        console.log(`O produto ${produto.nome} já foi adicionado`)
+      }
     }
 
     // const [denunciado, setDenunciado]=useState([])
