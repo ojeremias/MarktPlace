@@ -9,24 +9,26 @@ function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavorit
             <h1 id="tituloSalgado">Salgados</h1>
             <table>
                 <tr>{
-                    salgadoProdutos.map(p =>
-                    <div key={p.id}>
+                salgadoProdutos.map(p =>
+                    <td>
+                    <div id="cardSalgado" key={p.id}>
                         {p.nome}<br/>
                     <div>
-                    <img src={img[p.id]} height={100} width={100}></img>
+                    <img id='imgSalgado' src={[p.img]}></img>
                     </div>
                         {p.valor}<br/>
-                        <button onClick={()=>{
+                        <button id='btnFavSalgado' onClick={()=>{
                             adicionarFavoritos(p);
                             console.log(p)
-                        }}>Adicionar</button><br/>
+                        }}>Favoritar</button><br/>
 
                         <button id='btnDenSalgado' onClick={()=>{
                             adicionarDenuciado(p);
                         }}>Denuciar</button>
                     </div>
+                    </td>
                 )
-                }</tr>
+            }</tr>
             </table>
         </div>
     )
