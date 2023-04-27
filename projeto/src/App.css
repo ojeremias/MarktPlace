@@ -171,14 +171,18 @@ h1{
 
 .tecnologia {
   display: flex; 
-  flex-direction: row;
-  align-items: center;
-  
+  /* flex-direction: row; */
+  /* align-items: center; */
+  justify-content: center;
+  justify-items: center;
+  font-size: 15px;
+  text-align: center;
+
 }
 
 #img-tecnologia {
-  /* justify-content: ; */
-  width: 250px;
-  height: 250px;
+  margin-top: 2.5%;
+  width: 200px;
+  height: 200px;
 }
 

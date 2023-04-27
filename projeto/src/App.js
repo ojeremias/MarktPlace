@@ -156,27 +156,32 @@ function App() {
       {
         id: 1, 
         nome: "Fone",
-        valor: 15.99
+        valor: 15.99,
+        img: "./img/fone.jpg"
       },
       {
         id: 2, 
         nome: "Celular Positivo",
-        valor: 500
+        valor: 500,
+        img: "./img/positivo.jpg"
       },
       {
         id: 3,
         nome: "Gabinete",
-        valor: 250
+        valor: 250,
+        img: "./img/gabinete.jpg"
       },
       {
         id: 4,
         nome: "Impressora 3d",
-        valor: 3500.99
+        valor: 3500.99,
+        img: "./img/impressora_3d.jpg"
       },
       {
         id: 5,
         nome: "Kit Arduino",
-        valor: 75.99
+        valor: 75.99,
+        img: "./img/arduino.jpg"
       }
 
   ]
@@ -217,7 +222,6 @@ function App() {
    * TODO: REFATORAR
    */
   const [favoritos, setFavoritos]=useState([])
-<<<<<<< HEAD
 
   const[contador,setContador] = useState(0);
 
@@ -225,13 +229,12 @@ function App() {
       //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.
       console.log(produto);
       setContador(contador)
-=======
-  
+    }
+
   function adicionarFavoritos(produto){ //O parâmetro passado será informado pelos componentes.
     //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.    
     const favEncontrado = favoritos.find( f => f.id === produto.id);
     if(!favEncontrado){
->>>>>>> 03ae48c132edb9c9f5de0d8dd7720e5cc3f20869
       setFavoritos([...favoritos, produto]);
     }else{
       console.log("ja foi adicionado antes: "+ produto.nome)

@@ -1,30 +1,30 @@
 import React from 'react'
-import './InformaticaComponent.css'
+import styles from './InformaticaComponent.css'
 
 export default function InformaticaComponent({produtos, adicionarFavoritos, adicionarDenuciado}){
     return(
 
-        <div className='containerInformatica'>
+        <div className={styles.containerInformatica}>
         <h1>Setor Informatica (Antonio)</h1>
     <div className='telaInformatica'>
       {
           produtos.map(p => 
-            <div key={p.id} className='telaInformaticaCard'>
+            <div key={p.id} className={styles.selaInformaticaCard}>
           <div>
           Produto: {p.nome}
           </div>
-          <div className='telaInformaticaImg'>
-          <img className='img' src={p.img} alt='Img Antonio' ></img>
+          <div className={styles.telaInformaticaImg}>
+          <img className={styles.img} src={p.img} alt='Img Antonio' ></img>
           </div>
           <div>
             Preço: R${p.preco}
           </div> 
-          <div className='button' onClick={()=>{
+          <div className={styles.button} onClick={()=>{
                             adicionarFavoritos(p);
-                            console.log(p)
+                           
                         }}>Adicionar</div>
 
-                        <div className='button' onClick={()=>{
+                        <div className={styles.button} onClick={()=>{
                             adicionarDenuciado(p);
                         }}>Denuciar</div>
           </div>
