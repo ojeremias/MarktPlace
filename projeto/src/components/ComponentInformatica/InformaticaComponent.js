@@ -1,11 +1,20 @@
-import React from 'react'
+import  { useState } from 'react'
 import './InformaticaComponent.css'
 
+
+
 export default function InformaticaComponent({produtos, adicionarFavoritos, adicionarDenuciado}){
-    return(
+  
+  const [quantidade, setQuantidade] = useState(0)
+
+
+  return(
 
         <div className='containerInformatica'>
         <h1>Setor Informatica (Antonio)</h1>
+          <div>
+            quantidade : {quantidade}
+          </div>
     <div className='telaInformatica'>
       {
           produtos.map(p => 
@@ -21,7 +30,9 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
           </div> 
           <div className='button' onClick={()=>{
                             adicionarFavoritos(p);
-                            console.log(p)
+                           
+                            setQuantidade(quantidade+1);
+                           
                         }}>Adicionar</div>
 
                         <div className='button' onClick={()=>{
