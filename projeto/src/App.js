@@ -222,7 +222,9 @@ function App() {
       
     } 
 
-    const [denunciado, setDenunciado] = useState([]);
+    const [denunciado, setDenunciado] =useState([]);
+    
+    
 
     function adicionarDenuciado(produto){
       console.log(produto);
