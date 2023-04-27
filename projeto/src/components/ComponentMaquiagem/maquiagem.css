@@ -1,6 +1,10 @@
 h1{
     font-size: 55px;
  }
+
+ .textColor{
+   color: white;
+ }
  
 .maqContainer{
     display: flex;

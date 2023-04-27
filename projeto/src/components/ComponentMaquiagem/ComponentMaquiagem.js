@@ -8,6 +8,8 @@ function MaquiagemCompenent({maquiagemProdutos, adicionarFavoritos,adicionarDenu
     setCountFavoritosMaquiagem(countFavoritosMaquiagem+1);
     adicionarFavoritos(p);
   };
+console.log(maquiagemProdutos);
+ 
   
   return (
 
@@ -17,18 +19,20 @@ function MaquiagemCompenent({maquiagemProdutos, adicionarFavoritos,adicionarDenu
       {
         
         maquiagemProdutos.map(p =>
+
+          
           <div key={p.id} className="maqItem">
 
             <div className='maqtelaImg'>
-              <img className='img' src={p.img}></img>
+            <img className='img' src={p.img}></img>
               </div>
 
 
-              <div className='cardInfor'>
+              <div className='cardInfor textColor'>
                {p.nome}
               </div>
 
-              <div className='cardInfor'>
+              <div className='cardInfor textColor'>
               R$ {p.preco}
               </div>
 

@@ -20,17 +20,20 @@ function MarketPlace() {
     {
       id:1,
       nome: 'base',
-      preco: 55.90
+      preco: 55.90,
+      img: "./img/maqBase.jpg"
     },
     {
       id:2,
       nome:'corretivo',
-      preco: 38.40
+      preco: 38.40,
+      img: "./img/maqBlush.jpg"
     },
     {
       id:3,
       nome:'blush',
-      preco:29.90
+      preco:29.90,
+      img:"./img/maqCorretivo.png"
     },
   ]
   const comidaProdutos=[
