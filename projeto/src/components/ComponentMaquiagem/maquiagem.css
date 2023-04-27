@@ -1,0 +1,52 @@
+h1{
+    font-size: 55px;
+ }
+ 
+.maqTela{
+    display: flex;
+    min-height: 400px;
+    flex-direction: row;
+    padding: 20px;
+    margin: 5px;
+    width: 200px;
+    height: 220px;
+    border-radius: 10px; 
+}
+.maqTelaCard{
+    
+        padding: 20px;
+        margin: 8px;
+        width: 240px;
+        height: 250px;
+        border-radius: 12px;
+      
+        background-image:linear-gradient(12deg, black,rgb(107, 66, 66))  
+}
+.maqteladaImg img{
+    border-radius: 12px;
+    margin: 5px;
+    width: 140px;
+    height: 120px;
+}
+ .maqBotao{
+   
+    border-radius: 5px;
+    border: none;
+    font-weight: bold ;
+    margin: 3px;
+    padding: 5px;
+    left: 1000px;
+    background-color: transparent;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    
+ }
+ .maqBotao:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+ }
+ .maqTexto{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+ }

@@ -7,6 +7,7 @@ import React from 'react'
       <h1 id='h1'>Maquiagem - Vitória</h1>
       <div className="maqTela">
       {
+        
         maquiagemProdutos.map(p =>
           <div key={p.id} className="maqTela">
 
