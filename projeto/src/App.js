@@ -7,5 +7,4 @@ function App() {
       <MarketPlace/>
   );
 }
-
 export default App;
