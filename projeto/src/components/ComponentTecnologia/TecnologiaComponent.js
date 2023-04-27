@@ -3,13 +3,6 @@ import React from "react";
 function TecnologiaComponent ({ tecnologiaProdutos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}) {
 
     const img = ["", "./img/fone.jpg", "./img/positivo.jpg", "./img/gabinete.jpg", "./img/impressora_3d.jpg", "./img/arduino.jpg"]
-    /**const produtosFiltrado = salgadosProdutos.filter(p => p.categoria === categoria);
-
-    const handleAddProduto = (p) => {
-        if (p?.id){
-            onAdd (p.id);
-        }
-    }*/
 
     return (
         <div className="box-produto">
@@ -29,9 +22,8 @@ function TecnologiaComponent ({ tecnologiaProdutos, categoria, onAdd, adicionarF
                             adicionarDenuciado(p);
                         }}>Denuciar</button>
 
-            <div>
-                <img src={img[p.id]} alt ='tecnologia' id="img-tecnologia"></img>
-            </div>
+            <div> <img src={img[p.id]} alt ='tecnologia' id="img-tecnologia"></img> </div>
+            
                     </div>
                 )
             }
