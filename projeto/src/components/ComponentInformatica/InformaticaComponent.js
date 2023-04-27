@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+
 import  { useState } from 'react'
 import './InformaticaComponent.css'
-=======
+
 import React from 'react'
 import styles from './InformaticaComponent.css'
->>>>>>> 1d2ffc80389105bc4582360bfdb80d4727ca7854
+
 
 
 
@@ -36,11 +36,9 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
           <div className={styles.button} onClick={()=>{
                             adicionarFavoritos(p);
                            
-<<<<<<< HEAD
                             setQuantidade(quantidade+1);
                            
-=======
->>>>>>> 1d2ffc80389105bc4582360bfdb80d4727ca7854
+
                         }}>Adicionar</div>
 
                         <div className={styles.button} onClick={()=>{
