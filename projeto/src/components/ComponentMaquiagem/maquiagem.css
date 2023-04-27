@@ -2,7 +2,7 @@ h1{
     font-size: 55px;
  }
  
-.maqTela{
+.maqContainer{
     display: flex;
     min-height: 400px;
     flex-direction: row;
@@ -12,7 +12,7 @@ h1{
     height: 220px;
     border-radius: 10px; 
 }
-.maqTelaCard{
+.maqItem{
     
         padding: 20px;
         margin: 8px;
@@ -37,7 +37,7 @@ h1{
     padding: 5px;
     left: 1000px;
     background-color: transparent;
-    color:rgb(0, 0, 0);
+    color:rgb(253, 253, 253);
     text-align: center;
     
  }
@@ -47,6 +47,6 @@ h1{
  }
  .maqTexto{
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 20px;
  }
