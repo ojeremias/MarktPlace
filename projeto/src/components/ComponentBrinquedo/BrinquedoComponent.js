@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState } from 'react';
 import './Brinquedo.css'
 
 function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDenuciado,}) {
+
   const img = [ "", "./img/quebracabeca.svg", "./img/domino.svg", "./img/uno.svg",];
+  const [btFavBrinquedos, setBtFvBrinquedos] = useState(0);
+  const [btDenBrinquedos, setBtDenbtBrinquedos] = useState(0);
+  
+  function quantFavbtBrinquedos () {
+    setBtFvBrinquedos(+btFavBrinquedos + 1);
+  }
+  function quantDenbtBrinquedos () {
+    setBtDenbtBrinquedos(+btDenBrinquedos + 1);
+  }
+
   return (
     <div className="gallery">
       <h1>Brinquedos - Leonardo</h1>
+      <span>Quantidade de brinquedos <b>favoritados</b>: {btFavBrinquedos}</span>
+      <span>Quantidade de brinquedos <b>denunciados</b>: {btDenBrinquedos}</span>
       <div className="bcontent">
       {brinquedoProdutos.map((p) => (
         
@@ -23,10 +36,12 @@ function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDe
 
           <div className="buy">
             <div className="adicionar">
-              <button onClick={() => 
-              {adicionarFavoritos(p);
+              <button onClick={() => {
+                  adicionarFavoritos(p);
+                  quantFavbtBrinquedos();
                   console.log(p);
-                }}>
+                }
+                }>
                 Adicionar
               </button>
             </div>
@@ -34,6 +49,7 @@ function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDe
             <div className="denunciar">
               <button onClick={() => {
                   adicionarDenuciado(p);
+                  quantDenbtBrinquedos();
                 }}>
                 Denuciar
               </button>
