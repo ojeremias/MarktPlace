@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import './App.css';
-import ComidaComponent from './components/ComponentComida/ComidaComponent';
-import SapatoCompenent from './components/ComponentSapato/SapatoCompenent';
-import BebidaComponent from './components/ComponentBebida/BebidaComponent'
-import SalgadoCompenent from './components/ComponentSalgado/SalgadoComponent';
-import MaquiagemComponent from './components/ComponentMaquiagem/ComponentMaquiagem';
-import FavoritoComponent from './components/ComponentFavorito/FavoritoComponent';
-import DenuciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
-import InformaticaComponent from './components/ComponentInformatica/InformaticaComponent'
+import '../../App.css';
+import ComidaComponent from '../ComponentComida/ComidaComponent';
+import SapatoCompenent from '../ComponentSapato/SapatoCompenent';
+import BebidaComponent from '../ComponentBebida/BebidaComponent'
+import SalgadoCompenent from '../ComponentSalgado/SalgadoComponent';
+import MaquiagemComponent from '../ComponentMaquiagem/ComponentMaquiagem';
+import FavoritoComponent from '../ComponentFavorito/FavoritoComponent';
+import DenuciadoComponent from '../ComponentDenuciado/DenuciadoComponent';
+import InformaticaComponent from '../ComponentInformatica/InformaticaComponent'
 // import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
-import BrinquedoComponent from './components/ComponentBrinquedo/BrinquedoComponent'
-import TecnologiaComponent from './components/ComponentTecnologia/TecnologiaComponent';
+import BrinquedoComponent from '../ComponentBrinquedo/BrinquedoComponent'
+import TecnologiaComponent from '../ComponentTecnologia/TecnologiaComponent';
 
 
 function MarketPlace() {
