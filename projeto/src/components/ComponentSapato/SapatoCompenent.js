@@ -1,4 +1,5 @@
 import React from 'react'
+
 import "./sapatos.css"
 function SapatosCompenent({sapatoProdutos,categoria,onAdd, adicionarFavoritos,adicionarDenuciado}) {
   
@@ -57,5 +58,6 @@ function SapatosCompenent({sapatoProdutos,categoria,onAdd, adicionarFavoritos,ad
             </div>
    </div>
  )
-}
+          }
+
 export default SapatosCompenent

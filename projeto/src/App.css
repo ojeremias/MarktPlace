@@ -168,3 +168,21 @@ h1{
   background-color: #FFFFFF;
   color: #C10000;
 }
+
+.tecnologia {
+  display: flex; 
+  /* flex-direction: row; */
+  /* align-items: center; */
+  justify-content: center;
+  justify-items: center;
+  font-size: 15px;
+  text-align: center;
+
+}
+
+#img-tecnologia {
+  margin-top: 2.5%;
+  width: 200px;
+  height: 200px;
+}
+
