@@ -164,7 +164,7 @@ function MarketPlace() {
       },
       {
         id: 2, 
-        nome: "Celular Positivo",
+        nome: "Celular",
         valor: 500,
         img: "./img/positivo.jpg"
       },
@@ -176,8 +176,8 @@ function MarketPlace() {
       },
       {
         id: 4,
-        nome: "Impressora 3d",
-        valor: 3500.99,
+        nome: "Impressora",
+        valor: 3500,
         img: "./img/impressora_3d.jpg"
       },
       {
