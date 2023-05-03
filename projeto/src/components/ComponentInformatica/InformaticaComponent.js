@@ -1,10 +1,7 @@
 
-import  { useState } from 'react'
-import './InformaticaComponent.css'
-
-import React from 'react'
-import styles from './InformaticaComponent.css'
-
+import  { useState } from 'react';
+// import '../../App.css';
+import './InformaticaComponent.css';
 
 
 
@@ -15,7 +12,7 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
 
   return(
 
-        <div className={styles.containerInformatica}>
+        <div className='containerInformatica' >
         <h1>Setor Informatica (Antonio)</h1>
           <div>
             quantidade : {quantidade}
@@ -23,17 +20,18 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
     <div className='telaInformatica'>
       {
           produtos.map(p => 
-            <div key={p.id} className={styles.selaInformaticaCard}>
+            <div key={p.id} className="telaInformaticaCard">
+          
           <div>
           Produto: {p.nome}
           </div>
-          <div className={styles.telaInformaticaImg}>
-          <img className={styles.img} src={p.img} alt='Img Antonio' ></img>
+          <div className='telaInformaticaImg'>
+          <img className='img' src={p.img} alt='Img Antonio' ></img>
           </div>
           <div>
             Preço: R${p.preco}
           </div> 
-          <div className={styles.button} onClick={()=>{
+          <div className="button" onClick={()=>{
                             adicionarFavoritos(p);
                            
                             setQuantidade(quantidade+1);
@@ -41,7 +39,7 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
 
                         }}>Adicionar</div>
 
-                        <div className={styles.button} onClick={()=>{
+                        <div className="button" onClick={()=>{
                             adicionarDenuciado(p);
                         }}>Denuciar</div>
           </div>
