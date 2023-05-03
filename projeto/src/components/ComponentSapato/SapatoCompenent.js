@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import "./sapatos.css"
-function SapatosCompenent({sapatoProdutos,categoria,onAdd, adicionarFavoritos,adicionarDenuciado}) {
-  
+function SapatosCompenent({sapatoProdutos,categoria,onAdd,roandAdd, adicionarFavoritos,adicionarDenuciado}) {
+const[somar,setSomar]  = useState(0);
+
  return (
    <div className='sapConteiner'>
      <h1>SAPATOS ROBERTO/CLICIA</h1>
@@ -35,6 +36,7 @@ function SapatosCompenent({sapatoProdutos,categoria,onAdd, adicionarFavoritos,ad
             
               <div className='sapBotao' onClick={()=>{
               adicionarFavoritos(p);
+              
                console.log(p)
              }}>Adicionar </div>
              
@@ -44,6 +46,9 @@ function SapatosCompenent({sapatoProdutos,categoria,onAdd, adicionarFavoritos,ad
                adicionarDenuciado(p);
              }}>Denuciar</div>
 
+             <div className='sapBotao' onClick={(somar) => {
+              setSomar(roandAdd);
+             }}>somar</div>
 
              </div>
 
