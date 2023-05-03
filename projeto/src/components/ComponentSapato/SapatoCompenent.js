@@ -2,11 +2,16 @@ import React, { useState } from 'react'
 
 import "./sapatos.css"
 function SapatosCompenent({sapatoProdutos,categoria,onAdd,roandAdd, adicionarFavoritos,adicionarDenuciado}) {
-const[somar,setSomar]  = useState(0);
+const[sapContar,setSapcontar]  = useState(0);
+
+function quantFavSaoContar(){
+  setSapcontar(sapContar +1)
+}
 
  return (
    <div className='sapConteiner'>
      <h1>SAPATOS ROBERTO/CLICIA</h1>
+     <span> Sapatos adicionado <b>favoritados</b>:{sapContar}</span>
    <div className="sapTela">
        {
 
@@ -36,6 +41,7 @@ const[somar,setSomar]  = useState(0);
             
               <div className='sapBotao' onClick={()=>{
               adicionarFavoritos(p);
+              quantFavSaoContar();
               
                console.log(p)
              }}>Adicionar </div>
@@ -46,9 +52,6 @@ const[somar,setSomar]  = useState(0);
                adicionarDenuciado(p);
              }}>Denuciar</div>
 
-             <div className='sapBotao' onClick={(somar) => {
-              setSomar(roandAdd);
-             }}>somar</div>
 
              </div>
 
