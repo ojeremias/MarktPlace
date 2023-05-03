@@ -31,7 +31,7 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
           <div>
             Preço: R${p.preco}
           </div> 
-          <div className='.button' onClick={()=>{
+          <div className="button" onClick={()=>{
                             adicionarFavoritos(p);
                            
                             setQuantidade(quantidade+1);
@@ -39,7 +39,7 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
 
                         }}>Adicionar</div>
 
-                        <div className='.button' onClick={()=>{
+                        <div className="button" onClick={()=>{
                             adicionarDenuciado(p);
                         }}>Denuciar</div>
           </div>
