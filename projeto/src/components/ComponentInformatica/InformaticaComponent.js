@@ -8,14 +8,18 @@ import './InformaticaComponent.css';
 export default function InformaticaComponent({produtos, adicionarFavoritos, adicionarDenuciado}){
   
   const [quantidade, setQuantidade] = useState(0)
+  const [quantidade1, setQuantidade1] = useState(0)
 
 
   return(
 
         <div className='containerInformatica' >
         <h1>Setor Informatica (Antonio)</h1>
-          <div>
-            quantidade : {quantidade}
+          <div className='divQuantidades'>
+          
+            Produtos que foram Adicionados : {quantidade } {' '}
+            Produtos que foram denunciados : {quantidade1}
+     
           </div>
     <div className='telaInformatica'>
       {
@@ -41,6 +45,7 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
 
                         <div className="button" onClick={()=>{
                             adicionarDenuciado(p);
+                            setQuantidade1(quantidade1+1);
                         }}>Denuciar</div>
           </div>
         )
