@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import "./sapatos.css"
 function SapatosCompenent({sapatoProdutos,categoria,onAdd,roandAdd, adicionarFavoritos,adicionarDenuciado}) {
@@ -8,6 +8,15 @@ function quantFavSaoContar(){
   setSapcontar(sapContar +1)
 }
 
+useEffect(()=>{
+  console.log('tentei');
+  const load = async () => {
+    // const response = await fetch('');
+    // const dadosApi = response.json();
+    // console.log(dadosApi);
+  }
+  load();}
+)
  return (
    <div className='sapConteiner'>
      <h1>SAPATOS ROBERTO/CLICIA</h1>

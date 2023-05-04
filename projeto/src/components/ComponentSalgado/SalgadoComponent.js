@@ -8,10 +8,11 @@ function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavorit
         <div className="box-produto">
             <h1 id="tituloSalgado">Salgados</h1>
             <table>
-                <tr>{
-                salgadoProdutos.map(p =>
-                    <td>
-                    <div id="cardSalgado" key={p.id}>
+                <tbody>
+                    <tr>{
+                        salgadoProdutos.map(p =>
+                            <td key={p.id}>
+                    <div id="cardSalgado" >
                         {p.nome}<br/>
                     <div>
                     <img id='imgSalgado' src={[p.img]}></img>
@@ -29,6 +30,7 @@ function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavorit
                     </td>
                 )
             }</tr>
+            </tbody>
             </table>
         </div>
     )
