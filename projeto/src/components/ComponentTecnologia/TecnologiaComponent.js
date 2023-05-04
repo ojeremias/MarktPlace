@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 
 function TecnologiaComponent ({ tecnologiaProdutos, adicionarFavoritos, adicionarDenuciado}) {
 
@@ -20,7 +20,10 @@ function TecnologiaComponent ({ tecnologiaProdutos, adicionarFavoritos, adiciona
         adicionarDenuciado(p);
     };
     
-
+    useEffect(() => {
+        // Atualize o título do documento usando a API do navegador
+        document.title = `You clicked ${"count"} times`;
+    },[]);
 
     return (
         <div className="box-produto">
