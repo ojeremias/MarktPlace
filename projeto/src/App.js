@@ -1,17 +1,5 @@
-import { useState } from 'react';
 import './App.css';
-import ComidaComponent from './components/ComponentComida/ComidaComponent';
-import SapatoCompenent from './components/ComponentSapato/SapatoCompenent';
-import BebidaComponent from './components/ComponentBebida/BebidaComponent'
-import SalgadoCompenent from './components/ComponentSalgado/SalgadoComponent';
-import MaquiagemComponent from './components/ComponentMaquiagem/ComponentMaquiagem';
-import FavoritoComponent from './components/ComponentFavorito/FavoritoComponent';
-import DenuciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
-import InformaticaComponent from './components/ComponentInformatica/InformaticaComponent'
-// import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
-import BrinquedoComponent from './components/ComponentBrinquedo/BrinquedoComponent'
-import TecnologiaComponent from './components/ComponentTecnologia/TecnologiaComponent';
-
+import MarketPlace from './components/MarketPlace/MarketPlace';
 
 function App() {
 
@@ -43,7 +31,6 @@ function App() {
       id:2,
       nome:'Sanduíche',
       preco: 40.00,
-      
     },
     {
       id:3,
@@ -237,51 +224,9 @@ function App() {
     //   setDenunciado([...denunciado, produto])
     // }
 
-    console.log(favoritos);
-
+    console.log(favorito)
     return (
-    <div className="App">
-
-      <div className='favoritosDenunciados'>
-        <div className='box'>
-          <FavoritoComponent favoritos={favoritos}/>
-        </div>
-
-        <div className='box'>
-          <DenuciadoComponent denuciado={denunciado}/>
-        </div>
-      </div>
-          
-        <div className="box">
-          <ComidaComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/>
-        </div>
-        <div className="box">
-          <SapatoCompenent adicionarFavoritos={adicionarFavoritos}adicionarDenuciado={adicionarDenuciado} sapatoProdutos={sapatoProdutos}/>
-        </div>
-        <div className="box">
-          <SalgadoCompenent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} salgadoProdutos={salgadoProdutos}/>
-        </div>
-        <div>
-          <BebidaComponent adicionarFavoritos={adicionarFavoritos} bebidaProdutos={bebidaProdutos}/>
-        </div>
-        <div>
-          <BrinquedoComponent adicionarFavoritos={adicionarFavoritos} adicionarDenuciado={adicionarDenuciado} brinquedoProdutos={brinquedoProdutos}/>
-        </div>
-        <div>
-            <InformaticaComponent adicionarFavoritos={adicionarFavoritos} adicionarDenuciado={adicionarDenuciado} produtos={informaticaProdutos}/>
-        </div>
-
-            <div>
-              <TecnologiaComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} tecnologiaProdutos={tecnologiaProdutos}/>
-            </div>
-      
-            <div>
-              <MaquiagemComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} maquiagemProdutos={maquiagemProdutos}/>
-            </div>
-
-        
-    </div>
+      <MarketPlace/>
   );
 }
-
 export default App;
