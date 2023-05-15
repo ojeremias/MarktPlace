@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
-import './Brinquedo.css'
+import React, { useState, useEffect } from 'react';
+import './Brinquedo.css';
 
-function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDenuciado,}) {
-
-  const img = [ "", "./img/quebracabeca.svg", "./img/domino.svg", "./img/uno.svg",];
+function BrinquedoComponent({ adicionarFavoritos, adicionarDenuciado }) {
   const [btFavBrinquedos, setBtFvBrinquedos] = useState(0);
   const [btDenBrinquedos, setBtDenbtBrinquedos] = useState(0);
-  
-  function quantFavbtBrinquedos () {
-    setBtFvBrinquedos(+btFavBrinquedos + 1);
+  const [dados, setDados] = useState(null);
+  const [images, setImages] = useState([]);
+
+  function quantFavbtBrinquedos() {
+    setBtFvBrinquedos(btFavBrinquedos + 1);
   }
-  function quantDenbtBrinquedos () {
-    setBtDenbtBrinquedos(+btDenBrinquedos + 1);
+
+  function quantDenbtBrinquedos() {
+    setBtDenbtBrinquedos(btDenBrinquedos + 1);
   }
+
+  useEffect(() => {
+    fetch('https://dummyjson.com/products/category/womens-shoes')
+      .then((response) => response.json())
+      .then((dados) => {
+        setDados(dados.message);
+        const imgs = dados.message.map((item) => item.image);
+        setImages(imgs);
+      });
+  }, []);
 
   return (
     <div className="gallery">
@@ -20,45 +31,46 @@ function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDe
       <span>Quantidade de brinquedos <b>favoritados</b>: {btFavBrinquedos}</span>
       <span>Quantidade de brinquedos <b>denunciados</b>: {btDenBrinquedos}</span>
       <div className="bcontent">
-      {brinquedoProdutos.map((p) => (
-        
-        <div key={p.id} className="content">
-          <div className="imgBrinquedo">
-            <img src={img[p.id]}></img>
-          </div>
+        {dados?.map((item, index) => (
+          <div key={item.id} className="content">
+            <div className="imgBrinquedo">
+            <img src={images[index]} alt={item.title} />
+            </div>
 
-          <div className="namePrice">
-            <h3>{p.nome}</h3>
-            <span>
-              <h6>R${p.preco}</h6>
+            <div className="namePrice">
+              <h3>{item.title}</h3>
+              <span>
+              <h6>R${item.price}</h6>
             </span>
           </div>
 
           <div className="buy">
             <div className="adicionar">
-              <button onClick={() => {
-                  adicionarFavoritos(p);
+              <button
+                onClick={() => {
+                  adicionarFavoritos(item);
                   quantFavbtBrinquedos();
-                  console.log(p);
-                }
-                }>
+                  console.log(item);
+                }}
+              >
                 Adicionar
               </button>
             </div>
 
             <div className="denunciar">
-              <button onClick={() => {
-                  adicionarDenuciado(p);
+              <button
+                onClick={() => {
+                  adicionarDenuciado(item);
                   quantDenbtBrinquedos();
-                }}>
-                Denuciar
+                }}
+              >
+                Denunciar
               </button>
             </div>
           </div>
         </div>
       ))}
       </div>
-
     </div>
   );
 }
