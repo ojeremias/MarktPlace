@@ -1,0 +1,42 @@
+.row{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.boxContainer{
+    border: solid 2px;
+}
+.red{
+    color: red;
+}
+.container2{
+    border: solid 2px blue
+}
+.produtosFinalizarCompra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerPreco{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    background-color: aqua;
+}
+.produtosY{
+    display: flex;
+    width: 200px;
+    text-align: center;
+    position: relative; 
+}
+
+.teste{
+    position: absolute; 
+}
+.precoFinal{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}

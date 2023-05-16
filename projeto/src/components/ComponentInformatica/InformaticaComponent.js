@@ -34,9 +34,9 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
             Preço: R${p.preco}
           </div> 
           <div className={styles.button} onClick={()=>{
-                            adicionarFavoritos(p);
+                          adicionarFavoritos(p);
                            
-                            setQuantidade(quantidade+1);
+                          setQuantidade(quantidade+1);
                            
 
                         }}>Adicionar</div>

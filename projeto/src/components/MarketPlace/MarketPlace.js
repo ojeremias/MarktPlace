@@ -11,10 +11,11 @@ import InformaticaComponent from '../ComponentInformatica/InformaticaComponent'
 // import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
 import BrinquedoComponent from '../ComponentBrinquedo/BrinquedoComponent'
 import TecnologiaComponent from '../ComponentTecnologia/TecnologiaComponent';
-
+import {useNavigate} from 'react-router-dom'
 
 function MarketPlace() {
 
+  const navigate = useNavigate()
 
   const maquiagemProdutos=[
     {
@@ -265,7 +266,11 @@ function MarketPlace() {
     console.log(favoritos);
 
     return (
+
     <div className="MarketPlace">
+      <button onClick={ () =>{
+        navigate('/finalizarcompra', {state: {fav: favoritos}})
+      }}>Press me</button>
 
       <div className='favoritosDenunciados'>
         <div className='box'>
