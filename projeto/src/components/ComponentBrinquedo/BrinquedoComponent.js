@@ -4,8 +4,11 @@ import './Brinquedo.css';
 function BrinquedoComponent({ brinquedosProdutos, categoria, adicionarFavoritos, adicionarDenuciado }) {
   const [btFavBrinquedos, setBtFvBrinquedos] = useState(0);
   const [btDenBrinquedos, setBtDenbtBrinquedos] = useState(0);
-  const [dados, setDados] = useState(null);
-  const [images, setImages] = useState([]);
+
+  // const [dados, setDados] = useState(null);
+  // const [images, setImages] = useState([]);
+  const [listaBrinquedos, setListaBrinquedos] = useState([]);
+  // const [ordem, setOrdem] = useState('preco');
 
   function quantFavbtBrinquedos() {
     setBtFvBrinquedos(btFavBrinquedos + 1);
@@ -35,9 +38,20 @@ function BrinquedoComponent({ brinquedosProdutos, categoria, adicionarFavoritos,
 
   useEffect(() => {
     const load = async () => {
-      const sapatosMasculinos
+      const brinquedos = await pegarProdutos('home-decoration');
+
+      setListaBrinquedos([...brinquedos]);
     }
-  }, [])
+    load();
+  }, []);
+
+  // useEffect(() => {
+  //   const listaOrdenada = setListaBrinquedos.sort(function(a,b) {
+  //     return a[ordem] < b[ordem] ? -1 : a[ordem] > b[ordem] ? 1 : 0;
+  //   });
+
+  //   setListaBrinquedos(listaOrdenada);
+  // }, [ordem]);
 
   // useEffect(() => {
   //   fetch('https://dummyjson.com/products/category/womens-shoes')
@@ -55,16 +69,16 @@ function BrinquedoComponent({ brinquedosProdutos, categoria, adicionarFavoritos,
       <span>Quantidade de brinquedos <b>favoritados</b>: {btFavBrinquedos}</span>
       <span>Quantidade de brinquedos <b>denunciados</b>: {btDenBrinquedos}</span>
       <div className="bcontent">
-        {brinquedosProdutos?.map((item, index) => (
-          <div key={item.id} className="content">
+        {listaBrinquedos?.map(p => (
+          <div key={p.id} className="content">
             <div className="imgBrinquedo">
-            <img src={images[index]} alt={item.title} />
+            <img src={p.img} alt={p.title} />
             </div>
 
             <div className="namePrice">
-              <h3>{item.title}</h3>
+              <h3>{p.nome}</h3>
               <span>
-              <h6>R${item.price}</h6>
+              <h6>R${p.preco}</h6>
             </span>
           </div>
 
@@ -72,9 +86,9 @@ function BrinquedoComponent({ brinquedosProdutos, categoria, adicionarFavoritos,
             <div className="adicionar">
               <button
                 onClick={() => {
-                  adicionarFavoritos(item);
+                  adicionarFavoritos(p);
                   quantFavbtBrinquedos();
-                  console.log(item);
+                  console.log(p);
                 }}
               >
                 Adicionar
@@ -84,7 +98,7 @@ function BrinquedoComponent({ brinquedosProdutos, categoria, adicionarFavoritos,
             <div className="denunciar">
               <button
                 onClick={() => {
-                  adicionarDenuciado(item);
+                  adicionarDenuciado(p);
                   quantDenbtBrinquedos();
                 }}
               >
