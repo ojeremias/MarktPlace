@@ -35,7 +35,6 @@ function TecnologiaComponent ({ tecnologiaProdutos, adicionarFavoritos, adiciona
                 nome: product.title,
                 valor: product.price,
                 estoque: product.stock,
-                marca: product.brand,
                 categoria: product.category,
                 thumbnail: product.thumbnail
               })
@@ -61,13 +60,15 @@ function TecnologiaComponent ({ tecnologiaProdutos, adicionarFavoritos, adiciona
             {
                 meusProdutos.map(p =>
                     <div key={p.id}className="item">
-                        {p.nome} R${p.valor}
                         
+                        <div> <img src={p.thumbnail} alt ='tecnologia' id="img-tecnologia"></img> </div>
+                        <div> {p.nome} </div>
+                        <div> Valor R$ {p.valor} </div>
+                        <div> Estoque: {p.estoque} </div>
+                                           
                         <button onClick={()=>{handleAddFavorito(p)}}>Adicionar</button>
 
                         <button onClick={()=>{handleAddDenunciado(p);}}>Denuciar</button>
-
-                        <div> <img src={p.thumbnail} alt ='tecnologia' id="img-tecnologia"></img> </div>
             
                     </div>
                 )
