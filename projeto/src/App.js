@@ -1,5 +1,8 @@
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import MarketPlace from './components/MarketPlace/MarketPlace';
+import BrinquedosPageComponent from './components/ComponentBrinquedo/BrinquedosPageComponent.jsx';
 
 function App() {
 
@@ -224,9 +227,13 @@ function App() {
     //   setDenunciado([...denunciado, produto])
     // }
 
-    console.log(favorito)
+    console.log(favoritos)
     return (
-      <MarketPlace/>
+      <Routes>
+        <Route path="/" element={<MarketPlace/>}></Route>
+        <Route path="/brinquedos" element={<BrinquedosPageComponent/>}></Route>
+      </Routes>
+      
   );
 }
 export default App;
