@@ -67,3 +67,19 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+
+.container-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.container-totais{
+    display: flex;
+}
+
+.container-select{
+    display: flex;
+}

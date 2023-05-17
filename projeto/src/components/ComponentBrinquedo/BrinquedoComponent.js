@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+
 import './Brinquedo.css';
 
-function BrinquedoComponent({ brinquedosProdutos, categoria, adicionarFavoritos, adicionarDenuciado }) {
+function BrinquedoComponent({ adicionarFavoritos, adicionarDenuciado }) {
   const [btFavBrinquedos, setBtFvBrinquedos] = useState(0);
   const [btDenBrinquedos, setBtDenbtBrinquedos] = useState(0);
 
   // const [dados, setDados] = useState(null);
   // const [images, setImages] = useState([]);
   const [listaBrinquedos, setListaBrinquedos] = useState([]);
-  // const [ordem, setOrdem] = useState('preco');
+  const [ordem, setOrdem] = useState(null);
 
   function quantFavbtBrinquedos() {
     setBtFvBrinquedos(btFavBrinquedos + 1);
@@ -25,11 +27,11 @@ function BrinquedoComponent({ brinquedosProdutos, categoria, adicionarFavoritos,
       product => ({
         id: product.id,
         nome: product.title,
-        preco: product.price,
+        preco: Number(product.price),
         img: product.thumbnail,
         marca: product.brand,
         estoque: product.sotck,
-        avaliacao: product.rating
+        avaliacao: Number(product.rating)
       })
     );
 
@@ -45,29 +47,41 @@ function BrinquedoComponent({ brinquedosProdutos, categoria, adicionarFavoritos,
     load();
   }, []);
 
-  // useEffect(() => {
-  //   const listaOrdenada = setListaBrinquedos.sort(function(a,b) {
-  //     return a[ordem] < b[ordem] ? -1 : a[ordem] > b[ordem] ? 1 : 0;
-  //   });
+  useEffect(() => {
 
-  //   setListaBrinquedos(listaOrdenada);
-  // }, [ordem]);
+    console.log('ordenar ' + ordem);
+    if(listaBrinquedos?.length >0){
+      const listaOrdenada = listaBrinquedos.sort(function(a,b) {
+        return (a[ordem] < b[ordem]) ? -1 : (a[ordem] > b[ordem]) ? 1 : 0;
+      });
+      console.log(listaBrinquedos);
+      setListaBrinquedos([...listaOrdenada]);
+    }
+   
+  }, [ordem]);
 
-  // useEffect(() => {
-  //   fetch('https://dummyjson.com/products/category/womens-shoes')
-  //     .then((response) => response.json())
-  //     .then((dados) => {
-  //       setDados(dados.message);
-  //       const imgs = dados.message.map((item) => item.image);
-  //       setImages(imgs);
-  //     });
-  // }, []);
 
   return (
     <div className="gallery">
       <h1>Brinquedos - Leonardo</h1>
-      <span>Quantidade de brinquedos <b>favoritados</b>: {btFavBrinquedos}</span>
-      <span>Quantidade de brinquedos <b>denunciados</b>: {btDenBrinquedos}</span>
+
+      <div className="container-header">
+        <div className="container-totais">
+          <span>Quantidade de brinquedos <b>favoritados</b>: {btFavBrinquedos}</span>
+          <span>Quantidade de brinquedos <b>denunciados</b>: {btDenBrinquedos}</span>
+        </div>
+        <div className="container-select">
+          <select onChange={(evt) => setOrdem(evt.target.value)}>
+            <option value="">Ordenar por</option>
+            <option value="nome">Nome</option>
+            <option value="preco">Preço</option>
+            <option value="avaliacao">Avaliaçâo</option>
+          </select>
+        </div>
+
+      </div>
+      
+      
       <div className="bcontent">
         {listaBrinquedos?.map(p => (
           <div key={p.id} className="content">
@@ -76,7 +90,7 @@ function BrinquedoComponent({ brinquedosProdutos, categoria, adicionarFavoritos,
             </div>
 
             <div className="namePrice">
-              <h3>{p.nome}</h3>
+              <h3>{p.nome} ({p.avaliacao})</h3>
               <span>
               <h6>R${p.preco}</h6>
             </span>
