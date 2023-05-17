@@ -21,18 +21,21 @@
   color: #fff;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 700;
-  /* border: 1px solid #ff0000; */
+  border: 1px solid #ff0000;
+  flex-wrap: wrap;
+ 
   }
   .telaInformaticaCard{
-    padding: 20px;
-    margin: 8px;
+    padding: 22px;
+    margin: 10px;
     width: 240px;
-    height: 250px;
+    height: 300px;
     border-radius: 22px;
-    /* border: 1px solid #ff0000; */
+    border: 1px solid #ff0000;
     background-color: #002940;
     box-shadow: 0px 2px 8px 2px rgb(93, 88, 131);
-  
+    
+    
   }
   .telaInformaticaCard:hover{
     cursor: default;
