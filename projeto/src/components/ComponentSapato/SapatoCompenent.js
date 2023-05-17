@@ -34,7 +34,7 @@ function SapatosCompenent({ sapatoProdutos, categoria, onAdd, roandAdd, adiciona
     const load = async () => {
       const sapatosMasculinos = await getProdutos('mens-shoes');
       const sapatosFemininos = await getProdutos('womens-shoes');
-
+      
       setListaSapato([...sapatosFemininos, ...sapatosMasculinos]);
     }
     load();
