@@ -54,8 +54,8 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
   return (
     <div className='containerInformatica'>
       <h1>Informática do Tonho</h1>
-      <span> Informatica adicionado <b>favoritados</b>:{infoContar}</span>
-      <select onChange={(op) => setOrdem(op.target.value)}>
+      <span> Informatica adicionado <b>favoritados</b>: {infoContar}</span>
+      <select onChange={(op) => setOrdem(op.target.value)} className='select'>
           <option value='preco'>Preço</option>
           <option value='estoque'>Estoque</option>
           <option value='avaliacao'>Avaliação</option>
@@ -70,12 +70,14 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
                 <img className='img' src={p.img}></img>
               </div>
 
-              <div className='' >
-                {p.nome}
+              <div className='texto' >
+              Produto: <span className='textoP'>{p.nome}</span>
               </div>
-
-              <div className=''>
-                $:{p.preco}
+              <div className='texto'>
+               Preço(EUA): <span className='textoP'>{p.preco}</span>
+              </div>
+              <div className='texto'>
+               Disponivel: <span className='textoP'>{p.estoque}</span>
               </div>
 
               <div className='button' onClick={() => {
