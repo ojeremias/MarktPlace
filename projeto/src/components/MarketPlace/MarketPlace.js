@@ -9,9 +9,10 @@ import FavoritoComponent from '../ComponentFavorito/FavoritoComponent';
 import DenuciadoComponent from '../ComponentDenuciado/DenuciadoComponent';
 import InformaticaComponent from '../ComponentInformatica/InformaticaComponent'
 // import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
-import BrinquedoComponent from '../ComponentBrinquedo/BrinquedoComponent'
+// import BrinquedoComponent from '../ComponentBrinquedo/BrinquedoComponent'
 import TecnologiaComponent from '../ComponentTecnologia/TecnologiaComponent';
 
+import { Link } from "react-router-dom";
 
 function MarketPlace() {
 
@@ -293,7 +294,8 @@ function MarketPlace() {
           <BebidaComponent adicionarFavoritos={adicionarFavoritos} bebidaProdutos={bebidaProdutos}/>
         </div>
         <div>
-          <BrinquedoComponent adicionarFavoritos={adicionarFavoritos} adicionarDenuciado={adicionarDenuciado} brinquedoProdutos={brinquedoProdutos}/>
+          {/* <BrinquedoComponent adicionarFavoritos={adicionarFavoritos} adicionarDenuciado={adicionarDenuciado} brinquedoProdutos={brinquedoProdutos}/> */}
+          <Link to="/category/brinquedos">Brinquedos</Link>
         </div>
         <div>
             <InformaticaComponent adicionarFavoritos={adicionarFavoritos} adicionarDenuciado={adicionarDenuciado} produtos={informaticaProdutos}/>

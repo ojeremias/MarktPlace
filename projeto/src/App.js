@@ -1,16 +1,17 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import MarketPlace from './components/MarketPlace/MarketPlace';
-import BrinquedosPageComponent from './components/ComponentBrinquedo/BrinquedosPageComponent.jsx';
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/routes/Navbar";
+import Marketplace from "./components/MarketPlace/MarketPlace";
 
 function App() {
-
-    return (
-      <Routes>
-        <Route path="/" element={<MarketPlace/>}></Route>
-        <Route path="/brinquedos" element={<BrinquedosPageComponent/>}></Route>
-      </Routes>
-      
+  return (
+    <div>
+      <Navbar />
+      <Outlet />
+      <Marketplace />
+    </div>
   );
 }
+
 export default App;
+

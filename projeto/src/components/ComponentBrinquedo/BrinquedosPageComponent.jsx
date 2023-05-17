@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import BrinquedoComponent from './BrinquedoComponent';
 
 function BrinquedosPageComponent() {
-  return (
-    <div>BrinquedosPageComponent</div>
-  )
-}
 
-export default BrinquedosPageComponent
+   return (
+     <div>
+        <BrinquedoComponent />
+     </div>
+   )
+ }
+
+export default BrinquedosPageComponent;
