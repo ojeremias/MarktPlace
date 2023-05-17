@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import MarketPlace from './components/MarketPlace/MarketPlace';
@@ -226,7 +227,7 @@ function App() {
     //   setDenunciado([...denunciado, produto])
     // }
 
-    console.log(favorito)
+    console.log(favoritos)
     return (
       <Routes>
         <Route path="/" element={<MarketPlace/>}></Route>
