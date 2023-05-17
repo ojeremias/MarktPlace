@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Brinquedo.css'
 
-function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDenuciado,}) {
+function BrinquedoComponent({ brinquedoProdutos, adicionarFavoritos, adicionarDenuciado, produtos}) {
 
   const img = [ "", "./img/quebracabeca.svg", "./img/domino.svg", "./img/uno.svg",];
   const [btFavBrinquedos, setBtFvBrinquedos] = useState(0);

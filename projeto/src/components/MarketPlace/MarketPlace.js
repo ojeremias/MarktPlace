@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../../App.css';
 import ComidaComponent from '../ComponentComida/ComidaComponent';
 import SapatoCompenent from '../ComponentSapato/SapatoCompenent';
@@ -265,7 +265,41 @@ function MarketPlace() {
     //   setDenunciado([...denunciado, produto])
     // }
 
-    console.log(favoritos);
+
+    const [produtos, setProdutos ] = useState([])
+
+    useEffect( () => {
+
+      const load =  async ()=>{
+        const response = await fetch('https://dummyjson.com/products?limit=100')
+        const responseProduct = await response.json();
+
+        console.log(responseProduct.products);
+        const produtos =  responseProduct.products.map(
+           ({ category, description, imagens, price, title, id}) => (
+          {
+            categoria: category,
+            descricao: description,
+            imagem: imagens,
+            preco: price,
+            nome: title,
+            id: id
+          }
+          )
+          
+          
+        )
+        
+        console.log("produtos " + produtos);
+        setProdutos(responseProduct);
+
+        
+      }
+
+      load();
+    }, [])
+
+    
 
     return (
     <div className="MarketPlace">
@@ -281,7 +315,10 @@ function MarketPlace() {
       </div>
           
         <div className="box">
-          <ComidaComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} comidaProdutos={comidaProdutos}/>
+          <ComidaComponent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} 
+          comidaProdutos={comidaProdutos}
+          produtos = { produtos}
+          />
         </div>
         <div className="box">
           <SapatoCompenent adicionarFavoritos={adicionarFavoritos}adicionarDenuciado={adicionarDenuciado} sapatoProdutos={sapatoProdutos}/>
