@@ -2,7 +2,7 @@
 import  { useState } from 'react';
 // import '../../App.css';
 import './InformaticaComponent.css';
-
+import { Link } from 'react-router-dom';
 
 
 export default function InformaticaComponent({produtos, adicionarFavoritos, adicionarDenuciado}){
@@ -51,6 +51,7 @@ export default function InformaticaComponent({produtos, adicionarFavoritos, adic
         )
     }
     </div>
+    <h3><Link to="informatica">Clique para ir a página de Informatica do Tonhão</Link></h3>
     </div>
    
         
