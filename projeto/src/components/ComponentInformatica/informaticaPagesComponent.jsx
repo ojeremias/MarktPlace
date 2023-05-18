@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './InformaticaComponent.css';
 import { Link } from 'react-router-dom';
 
+// import {adicionarFavoritos, adicionarDenuciado}  from '../MarketPlace/MarketPlace';
+
 
 function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
 
@@ -33,8 +35,13 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
     const load = async () => {
       const informaticaNotebook = await getProdutos('laptops');
       const informaticaSmartphone = await getProdutos('smartphones');
-
-      setlistaInfor([...informaticaSmartphone, ...informaticaNotebook]);
+      const informaticaRelogioF = await getProdutos('womens-watches');
+      const informaticaRelogioM = await getProdutos('mens-watches');
+      
+      setlistaInfor([...informaticaSmartphone, ...informaticaNotebook, ...informaticaRelogioF, ...informaticaRelogioM]);
+    
+      
+    
     }
     load();
   }, []);
@@ -50,7 +57,8 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
 
   return (
     <div className='containerInformatica'>
-      <h1>Setor de Informática e Variedades (Tonho)</h1>
+      <h1>Setor de Informática e Variedades (Tonho)</h1> 
+      <img src='./img/vtec.png' className='img' alt="logo" />
 
       <div className='divQuantidades'>
 
