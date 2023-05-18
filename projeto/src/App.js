@@ -109,7 +109,7 @@ function App() {
         id: 1,
         nome: 'RTX 4090 TI',
         preco: 14000.00,
-        img: './img/rtx4090ti.png'
+        img: './img/rtx4090ti.png',
       },
       {
         id:2,
