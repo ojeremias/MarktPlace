@@ -5,16 +5,11 @@ import { Link } from 'react-router-dom';
 
 function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
 
-  const [infoContar, setinfoContar] = useState(0);
-
   const [quantidade, setQuantidade] = useState(0)
   const [quantidade1, setQuantidade1] = useState(0)
   const [listaInfor, setlistaInfor] = useState([]);
   const [ordem, setOrdem] = useState('preco')
-
-  function quantFavSaoContar() {
-    setinfoContar(infoContar + 1)
-  }
+  
   async function getProdutos(categoria) {
     const response = await fetch(`https://dummyjson.com/products/category/${categoria}`);
     const dadosApi = await response.json();
@@ -34,7 +29,7 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
   }
 
   useEffect(() => {
-   
+
     const load = async () => {
       const informaticaNotebook = await getProdutos('laptops');
       const informaticaSmartphone = await getProdutos('smartphones');
@@ -45,7 +40,7 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
   }, []);
 
   useEffect(() => {
-    const listaOrdenada = listaInfor.sort(function(a,b) {
+    const listaOrdenada = listaInfor.sort(function (a, b) {
       return a[ordem] < b[ordem] ? -1 : a[ordem] > b[ordem] ? 1 : 0;
     });
 
@@ -56,18 +51,18 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
   return (
     <div className='containerInformatica'>
       <h1>Informática do Tonho</h1>
-      
-         <div className='divQuantidades'>
-          
-            Produtos que foram Adicionados : {quantidade } {' '}
-            Produtos que foram denunciados : {quantidade1}
-     
-          </div>
+
+      <div className='divQuantidades'>
+
+        Produtos que foram Adicionados : {quantidade} {' '}
+        Produtos que foram denunciados : {quantidade1}
+
+      </div>
       <select onChange={(op) => setOrdem(op.target.value)} className='select'>
-          <option value='preco'>Preço</option>
-          <option value='estoque'>Estoque</option>
-          <option value='avaliacao'>Avaliação</option>
-        </select>
+        <option value='preco'>Preço</option>
+        <option value='estoque'>Estoque</option>
+        <option value='avaliacao'>Avaliação</option>
+      </select>
       <div className="telaInformatica">
         {
 
@@ -79,24 +74,24 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
               </div>
 
               <div className='texto' >
-              Produto: <span className='textoP'>{p.nome}</span>
+                Produto: <span className='textoP'>{p.nome}</span>
               </div>
               <div className='texto'>
-               Preço(EUA): <span className='textoP'>{p.preco}</span>
+                Preço(EUA): <span className='textoP'>{p.preco}</span>
               </div>
               <div className='texto'>
-               Disponivel: <span className='textoP'>{p.estoque}</span>
+                Disponivel: <span className='textoP'>{p.estoque}</span>
               </div>
 
               <div className='button' onClick={() => {
-    adicionarFavoritos(p);
-                           
-                            setQuantidade(quantidade+1);
+                adicionarFavoritos(p);
+
+                setQuantidade(quantidade + 1);
               }}>Adicionar </div>
 
               <div className='button' onClick={() => {
-                   adicionarDenuciado(p);
-                            setQuantidade1(quantidade1+1);
+                adicionarDenuciado(p);
+                setQuantidade1(quantidade1 + 1);
 
               }}>Denuciar</div>
 
@@ -106,7 +101,7 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
           )
         }
       </div>
-        <h3><Link to="informatica">Clique para ir a página de Informatica do Tonhão</Link></h3>
+      <h3><Link to="informatica">Clique para ir a página de Informatica do Tonhão</Link></h3>
     </div>
   )
 
