@@ -55,7 +55,7 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
       <div className='divQuantidades'>
 
         Produtos que foram Adicionados : {quantidade} {' '}
-        Produtos que foram denunciados : {quantidade1}
+        Produtos que foram Denunciados : {quantidade1}
 
       </div>
       <select onChange={(op) => setOrdem(op.target.value)} className='select'>
