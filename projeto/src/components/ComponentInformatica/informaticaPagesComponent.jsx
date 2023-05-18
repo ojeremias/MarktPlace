@@ -1,7 +1,5 @@
 import React from 'react';
 import './InformaticaComponent.css';
-import MarketPlace from '../MarketPlace/MarketPlace';
-
 
 
 function InformaticaPagesComponent() {

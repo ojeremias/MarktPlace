@@ -1,7 +1,7 @@
 import './App.css';
 import MarketPlace from './components/MarketPlace/MarketPlace';
 import { Routes, Route } from 'react-router-dom'; 
-import InformaticaPagesComponent from './components/ComponentInformatica/InformaticaPagesComponent';
+import InformaticaPagesComponent from './components/ComponentInformatica/informaticaPagesComponent';
 
 
 function App() {
