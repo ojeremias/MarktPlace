@@ -1,8 +1,9 @@
 import React, { useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
 
 function TecnologiaComponent ({ tecnologiaProdutos, adicionarFavoritos, adicionarDenuciado}) {
 
-    const img = ["", "./img/fone.jpg", "./img/positivo.jpg", "./img/gabinete.jpg", "./img/impressora_3d.jpg", "./img/arduino.jpg"]
+    // const img = ["", "./img/fone.jpg", "./img/positivo.jpg", "./img/gabinete.jpg", "./img/impressora_3d.jpg", "./img/arduino.jpg"]
 
     const [countFavoritosTecnologia, setCountFavoritosTecnologia] = useState(0);
 
@@ -51,7 +52,9 @@ function TecnologiaComponent ({ tecnologiaProdutos, adicionarFavoritos, adiciona
         <div className="box-produto">
             <h1>Tecnologia - Jeallyson</h1>
             <h1><small>Favoritos: ({countFavoritosTecnologia})</small> <small>Denunciados: ({countDenunciadosTecnologia})</small> </h1>
-        <select>
+            <Link to="tecnologia">Clique para ir a página tecnologia</Link>
+            
+        <select >
           <option value='preco'>Preço</option>
           <option value='estoque'>Estoque</option>
           <option value='avaliacao'>Avaliação</option>
