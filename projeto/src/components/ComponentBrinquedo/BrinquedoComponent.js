@@ -63,6 +63,7 @@ function BrinquedoComponent({ adicionarFavoritos, adicionarDenuciado }) {
 
   return (
     <div className="gallery">
+      <Link to="/brinquedos">Página principal de brinquedos</Link>
       <h1>Brinquedos - Leonardo</h1>
 
       <div className="container-header">

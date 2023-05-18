@@ -14,6 +14,7 @@ import TecnologiaComponent from '../ComponentTecnologia/TecnologiaComponent';
 
 import { Link } from "react-router-dom";
 
+
 function MarketPlace() {
 
 

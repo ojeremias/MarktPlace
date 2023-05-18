@@ -8,6 +8,7 @@ import ErrorPage from "./components/routes/ErrorPage";
 import Category from "./components/routes/Category";
 import MarketPlace from './components/MarketPlace/MarketPlace';
 import BrinquedosPageComponent from './components/ComponentBrinquedo/BrinquedosPageComponent';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,13 @@ ReactDOM.render(
         <Route path="/category" element={<Category />} />
         <Route path="/category/brinquedos" element={<BrinquedosPageComponent />} />
         <Route path="*" element={<ErrorPage />} />
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <BrowserRouter>
+    <App /> 
+  </BrowserRouter>
+);
 
       </Routes>
     </Router>
