@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import MarketPlace from './components/MarketPlace/MarketPlace';
 import BrinquedosPageComponent from './components/ComponentBrinquedo/BrinquedosPageComponent.jsx';
+import SalgadosHome from './home/salgadosHome.js';
 
 function App() {
 
@@ -230,10 +231,9 @@ function App() {
     console.log(favoritos)
     return (
       <Routes>
-        <Route path="/" element={<MarketPlace/>}></Route>
-        <Route path="/brinquedos" element={<BrinquedosPageComponent/>}></Route>
+        <Route path='/' element={<MarketPlace/>}/>
+        <Route path='salgados' element={<SalgadosHome/>}/>
       </Routes>
-      
   );
 }
 export default App;

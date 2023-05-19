@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { Link, useNavigation } from 'react-router-dom'
 
-function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}) {
+
+function SalgadosHome ({ salgadoProdutos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}) {
 
     useEffect(() => {
 
@@ -9,8 +9,8 @@ function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavorit
 
     return (
         <div className="box-produto">
-            <h1 id="tituloSalgado">Salgados</h1>
-            <Link to='salgados'>Ver mais</Link>
+            {/* <h1 id="tituloSalgado">Salgados</h1>
+            <h2>Favoritados () Denunciado ()</h2>
             <div id="carrosselSalgado">
                 {
                     salgadoProdutos.map(p =>
@@ -30,9 +30,10 @@ function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavorit
                         </div>
                     )
                 }
-            </div>
+            </div> */}
+            <h1>FOI?</h1>
         </div>
     )
 }
 
-export default SalgadoComponent
+export default SalgadosHome
