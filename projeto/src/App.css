@@ -118,6 +118,12 @@ h1{
   }
 
 /*SALGADOS*/
+#faden{
+  font-family: arial;
+  font-weight: 700;
+  color: #7e0202;
+  text-align: center;
+}
 #tituloSalgado{
   font-family: arial;
   font-weight: 900;
@@ -172,6 +178,7 @@ h1{
   display: flex;
 }
 
+/*TECNOLOGIA*/
 .tecnologia {
   display: flex;
   min-height: 400px;
@@ -196,4 +203,4 @@ h1{
   height: 200px;
   border-radius: 8px;
   background-image: linear-gradient(12deg, rgb(187, 187, 187),rgb(151, 148, 148)); 
-} 
+}
