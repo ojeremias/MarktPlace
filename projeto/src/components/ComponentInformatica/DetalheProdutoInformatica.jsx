@@ -21,11 +21,8 @@ function DetalheProdutoInformatica() {
                 estoque: p.stock,
                 categoria: p.category,
                 img: p.thumbnail,
-                img1: p.thumbnail,
-                img2: p.thumbnail,
-                img3: p.thumbnail,
-                img4: p.thumbnail,
-                img5: p.thumbnail,
+                img1: p.images[2],
+                img2: p.images[3],
                 descricao: p.description
             });
         };
@@ -36,7 +33,7 @@ function DetalheProdutoInformatica() {
 
     return (
         <div className='containerInformaticaDetalhes'>
-            <h2>Detalhes do produto id: {id}</h2>
+            <h2>Detalhes do produto ID: {id}</h2>
             {produto &&
             
                 <div className='telaInformaticaCardDetalhes'>
@@ -45,9 +42,7 @@ function DetalheProdutoInformatica() {
                         <img className='img' src={produto.img}></img>
                         <img className='img' src={produto.img1}></img>
                         <img className='img' src={produto.img2}></img>
-                        <img className='img' src={produto.img3}></img>
-                        <img className='img' src={produto.img4}></img>
-                        <img className='img' src={produto.img5}></img>
+                       
                     </div>
 
                     <div className='textoDetalhes' >
