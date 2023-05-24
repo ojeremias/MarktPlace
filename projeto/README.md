@@ -6,19 +6,19 @@
 ## 4. Passar funçoes como parametros
 
 # 5. Hook - React useState
-    1. Usar chatgpt para pesquisar OU QUALQUER FONTE A SEU CRITÉRIO(* incluindo zap e vozes da sua cabeça)
-    2. Criar variável em cada componente usando useState
-        ```
-            const [contagem, setContagem] = useState(0);
-        ```
-    3. Exibir a variável no return:
-        ```
-            <label>{contagem}</label>
-        ```
-    4. Na funçâo que trata o click do adicionar, incrementar a variável contagem com:
-        * Criar funçâo handleAddFavorito(produto)
-        ```
-            setContagem(contagem++);
+1. Usar chatgpt para pesquisar OU QUALQUER FONTE A SEU CRITÉRIO(* incluindo zap e vozes da sua cabeça)
+2. Criar variável em cada componente usando useState
+    ```
+        const [contagem, setContagem] = useState(0);
+    ```
+3. Exibir a variável no return:
+    ```
+        <label>{contagem}</label>
+    ```
+4. Na funçâo que trata o click do adicionar, incrementar a variável contagem com:
+    * Criar funçâo handleAddFavorito(produto)
+    ```
+        setContagem(contagem++);
         ```
 # 6. Hook - React useEffect * 
 
