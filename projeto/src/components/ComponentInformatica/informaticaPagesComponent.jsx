@@ -11,10 +11,11 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
   const [quantidade1, setQuantidade1] = useState(0)
   const [listaInfor, setlistaInfor] = useState([]);
   const [ordem, setOrdem] = useState('preco')
-  
+  const [guardaID,setGuardaID] = useState(0);
+
   async function getProdutos(categoria) {
     const response = await fetch(`https://dummyjson.com/products/category/${categoria}`);
-    const dadosApi = await response.json();
+    const dadosApi = await response.json(); 
     const result = dadosApi.products.map(
       product => ({
         id: product.id,
@@ -89,6 +90,10 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
               </div>
               <div className='texto'>
                 Disponivel: <span className='textoP'>{p.estoque}</span>
+              </div>
+              <div className='link'>
+               
+              <Link to={ `/informatica/${p.id}`} >Ver Mais sobre esse Produto: </Link>
               </div>
 
               <div className='button' onClick={() => {

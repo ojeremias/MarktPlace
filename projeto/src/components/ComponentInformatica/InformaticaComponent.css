@@ -30,7 +30,7 @@
     padding: 22px;
     margin: 10px;
     width: 250px;
-    height: 370px;
+    height: 470px;
     border-radius: 22px;
     border: 1px solid #ff0000;
     background-color: #002940;
@@ -83,6 +83,20 @@
     transform: scale(1.02);
     background-color: #004030;
 
+}
+.link{
+  color: #fff;
+  margin: 10px;
+}
+a{
+  color: #fff;
+ 
+}
+a:hover{
+  cursor: pointer;
+  transform: scale(1.02);
+  color: #cccccc;
+ 
 }
 
   /* Antonio css Fim */
