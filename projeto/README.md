@@ -248,6 +248,7 @@ Já no componente de Page que recebe, para recuperar as informações passando n
 ## Tarefa de useState, com select
 ### Layout/HTML/JSX
 
+1. Criar componente <select> com as opções de ordenação.
 ```
 <select>
     <option value="">Ordenar por</option>
