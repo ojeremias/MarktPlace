@@ -29,19 +29,19 @@
 
     * (LINK DA API PRODUTOS)[https://dummyjson.com/docs/products]
 
-### Primeira parte
+#### Primeira parte - Carregar os produtos uma vez no componente
 
-1. Criar um useEffect dentro do seu compomente que faz um fecth para a api acima, listando a sua categoria. Por exemplo, 
+1. Criar um _useEffect_ dentro do seu compomente que faz um fecth para a api acima, listando a sua categoria. Por exemplo, 
 
-https://dummyjson.com/products/category/womens-shoes
+[https://dummyjson.com/products/category/womens-shoes](https://dummyjson.com/products/category/womens-shoes)
 
-** Caso não tenha a sua categoria, utilize uma categoria próxima a seu critério. Ou ainda, busque uma caso julgue necessário.
+** Caso não tenha a sua categoria, utilize uma categoria próxima a seu critério. Ou ainda, busque uma caso julgue necessário.**
 
-2. Realize um map para transformar o resultado no formato adequado. Assim como é feito na classe PAI(Marketplace).
+2. Realize no array um _map_ para transformar o resultado no formato adequado. Assim como é feito na classe PAI(Marketplace).
 
 3. Coloque o resultado dos produtos numa variável e exiba na lista abaixo da lista anterior;
 
-### Segunda parte
+#### Segunda parte - Atualizar a ordenação via menu select
 
 1. Criar um SELECT com as opções de ordenação de produto, mais estoque, menor preço, maior preço, mais bem avaliados
 
