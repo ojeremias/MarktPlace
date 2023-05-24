@@ -83,7 +83,8 @@
     <Link to="filmes">Clique para ir a página de filmes</Link>
 ```
 
-## Recursos mais dinâmicos com rotas
+## Rotas: Recursos dinâmicos
+### Enviando parâmetros:
   
 6. Parametros dinâmicos:
 Passando parâmetros pelas rotas:
