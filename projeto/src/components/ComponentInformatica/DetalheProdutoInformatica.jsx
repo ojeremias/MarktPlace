@@ -5,37 +5,22 @@ import './InformaticaComponent.css';
 
 function DetalheProdutoInformatica() {
 
-    const [listaInfor, setlistaInfor] = useState(null);
+    const [produto, setProduto] = useState(null);
     const { idProduto } = useParams();
 
-    async function getProdutos(categoria) {
-        const response = await fetch(`https://dummyjson.com/products/category/${categoria}/${idProduto}`);
-        const dadosApi = await response.json();
-        const result = dadosApi.products.map(
-           
-             product => ({
-                id: product.id,
-                nome: product.title,
-                preco: product.price,
-                img: product.thumbnail,
-                marca: product.brand,
-                estoque: product.stock,
-                avaliacao: product.rating
-            })
-        
-            );
-
-
-        return result;
-    }
 
     useEffect(() => {
 
         const load = async () => {
-            const informaticaNotebook = await getProdutos('laptops');
+            const result = await fetch(``);
+            const produto = await result.json()
 
-            setlistaInfor([...informaticaNotebook]);
+
+            setProduto({
+                
+            });
         }
+
         load();
     }, [idProduto]);
 
@@ -47,17 +32,17 @@ function DetalheProdutoInformatica() {
             <div  className='telaInformaticaCard'>
 
                 {/* <div className='telaInformaticaImg' >
-                        <img className='img' src={listaInfor.img}></img>
+                        <img className='img' src={produto.img}></img>
                                                 </div> */}
 
                         <div className='texto' >
-                            Produto: <span className='textoP'>{listaInfor.nome}</span>
+                            Produto: <span className='textoP'>{produto.nome}</span>
                         </div>
                         <div className='texto'>
-                            Preço(EUA): <span className='textoP'>{listaInfor.preco}</span>
+                            Preço(EUA): <span className='textoP'>{produto.preco}</span>
                         </div>
                         <div className='texto'>
-                            Disponivel: <span className='textoP'>{listaInfor.estoque}</span>
+                            Disponivel: <span className='textoP'>{produto.estoque}</span>
                         </div>
 
 
