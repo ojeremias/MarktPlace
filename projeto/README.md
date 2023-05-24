@@ -85,43 +85,44 @@
 
 ## Recursos mais dinâmicos com rotas
   
-  6. Parametros dinâmicos:
-    Passando parâmetros pelas rotas:
-    ``` 
-      <Route path="/books/:id" element={<Book />} />
-    ```
+6. Parametros dinâmicos:
+Passando parâmetros pelas rotas:
+``` 
+  <Route path="/books/:id" element={<Book />} />
+```
     
-   Ler no código:
-    ``` js
-      const { id } = useParams()
-    ```
+Ler no código:
+``` js
+  const { id } = useParams()
+```
     
-  7. Rota default - não encontrada
-    Configurando uma rota default:
-    App.jsx
-    ```
-      <Route path="*" element={<NotFound />} />
-    ```
-    
-  8. Nested Routes
-    Agrupamento de rotas:
-    App.jsx
-    ``` 
-      <Routes>
-        <Route path="/" element={<Marketplace />} />
-        <Route path="/filmes">
-          <Route index element={<FilmesPageComponent />} />
-          <Route path=":id" element={<FilmeDetalhesComponent />} />
-          <Route path="new" element={<FilmeFormComponent />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    ```
-  9. Layout Compartilhados
-    Ex.: Criar uma área comum, por exemplo cabeçalho e/ou rodapé para diferentes componentes 
-  
-    ```
+7. Rota default - não encontrada
+Configurando uma rota default:
 App.jsx
+```
+  <Route path="*" element={<NotFound />} />
+```
+    
+8. Nested Routes
+Agrupamento de rotas:
+App.jsx
+``` 
+  <Routes>
+    <Route path="/" element={<Marketplace />} />
+    <Route path="/filmes">
+      <Route index element={<FilmesPageComponent />} />
+      <Route path=":id" element={<FilmeDetalhesComponent />} />
+      <Route path="new" element={<FilmeFormComponent />} />
+    </Route>
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+```
+
+9. Layout Compartilhados
+
+Ex.: Criar uma área comum, por exemplo cabeçalho e/ou rodapé para diferentes componentes 
+App.jsx
+```
     <Routes>
       <Route path="/" element={<Marketplace />} />
       <Route path="/filmes" element={<ProdutosHomeLayout />}>
@@ -135,10 +136,9 @@ App.jsx
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
-  ```
-
 ```
-.js
+ProdutuHomeComponent.js
+```
   import { Link, Outlet } from "react-router-dom"
 
   export function ProdutosHomeLayout() {
