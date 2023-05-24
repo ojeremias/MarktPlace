@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MarketPlace/>}></Route>
         <Route path="informatica" element={<InformaticaPagesComponent/>}></Route>
-        <Route path="informatica/:id" element={<DetalheProdutoInformatica />} />
+        <Route path="/informatica/:id" element={<DetalheProdutoInformatica />} />
         <Route path="*" element={<ErroPages />} />
       </Routes>
   );

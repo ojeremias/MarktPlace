@@ -11,7 +11,6 @@ import InformaticaComponent from '../ComponentInformatica/InformaticaComponent'
 // import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
 import BrinquedoComponent from '../ComponentBrinquedo/BrinquedoComponent'
 import TecnologiaComponent from '../ComponentTecnologia/TecnologiaComponent';
-import InformarticaPagesComponent from '../ComponentInformatica/informaticaPagesComponent'
 
 
 function MarketPlace() {
@@ -227,13 +226,6 @@ function MarketPlace() {
    */
   const [favoritos, setFavoritos]=useState([])
 
-  
-
-    function adicionarFavoritos(produto){ //O parâmetro passado será informado pelos componentes.
-      //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.
-      console.log(produto );
-  
-    }
 
   function adicionarFavoritos(produto){ //O parâmetro passado será informado pelos componentes.
     //Eles passaram um objeto, então: ao passar comidaProdutos, toda a lista será mostrada.    
