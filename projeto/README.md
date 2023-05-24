@@ -248,54 +248,6 @@ Já no componente de Page que recebe, para recuperar as informações passando n
 ## Tarefa de useState, com select
 ### Layout/HTML/JSX
 
-1. Criar componente <select> com as opções de ordenação.
 ```
-    <select>
-        <option value="">Ordenar por</option>
-        <option value="nome">Nome</option>
-        <option value="preco">Preço</option>
-        <option value="avaliacao">Avaliaçâo</option>
-    </select>
+const a = 10;
 ```
-    
-2. Criar uma variavel que observa a mudança do critério de ordenação
-
-``` 
-    const [ordem, setOrdem] = useState(null);
-```
-
-3. Disparar mudança para ao mudar o select, mudar o atributo de ordenação:
-```
-    <select onChange={(evt) => setOrdem(evt.target.value)}>
-        <option value="">Ordenar por</option>
-        <option value="nome">Nome</option>
-        <option value="preco">Preço</option>
-        <option value="avaliacao">Avaliaçâo</option>
-    </select>
-```
-
-4. Criar um useEffect que escuta as mudanças no ordem:
-```
-     useEffect(() => {
-
-        console.log('ordenar ' + ordem);
-
-    }, [ordem]);
-```
-
-5. Com a nova ordem, ordenar a lista:
-
-```
-    useEffect(() => {
-        if(listaBrinquedos?.length >0){
-            const listaOrdenada = listaBrinquedos.sort(function(a,b) {
-                return (a[ordem] < b[ordem]) ? -1 : (a[ordem] > b[ordem]) ? 1 : 0;
-            });
-
-            console.log(listaBrinquedos);
-            setListaBrinquedos([...listaOrdenada]);
-        }
-    }, [ordem]);
-```
-
-
