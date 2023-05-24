@@ -1,12 +1,14 @@
+import { useState } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/routes/Navbar";
 import Marketplace from "./components/MarketPlace/MarketPlace";
-import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
 
 import MarketPlace from './components/MarketPlace/MarketPlace';
+
 import BrinquedosPageComponent from './components/ComponentBrinquedo/BrinquedosPageComponent';
+import TecnologiaComponent from './components/ComponentTecnologia/TecnologiaComponent';
 
 function App() {
 
@@ -235,6 +237,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MarketPlace/>} />
         <Route path="/brinquedos" element={<BrinquedosPageComponent/>} />
+        <Route path="/" element={<MarketPlace/>}></Route>
+        <Route path="" element={<BrinquedosPageComponent/>}></Route>
+        <Route path="/tecnologia" element={<TecnologiaComponent/>}></Route>
       </Routes>
   );
 }
