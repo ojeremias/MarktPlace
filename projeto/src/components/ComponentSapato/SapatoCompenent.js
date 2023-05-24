@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 import "./sapatos.css"
 function SapatosCompenent({ sapatoProdutos, categoria, onAdd, roandAdd, adicionarFavoritos, adicionarDenuciado }) {
@@ -34,14 +35,14 @@ function SapatosCompenent({ sapatoProdutos, categoria, onAdd, roandAdd, adiciona
     const load = async () => {
       const sapatosMasculinos = await getProdutos('mens-shoes');
       const sapatosFemininos = await getProdutos('womens-shoes');
-      
+
       setListaSapato([...sapatosFemininos, ...sapatosMasculinos]);
     }
     load();
   }, []);
 
   useEffect(() => {
-    const listaOrdenada = listaSapato.sort(function(a,b) {
+    const listaOrdenada = listaSapato.sort(function (a, b) {
       return a[ordem] < b[ordem] ? -1 : a[ordem] > b[ordem] ? 1 : 0;
     });
 
@@ -54,10 +55,13 @@ function SapatosCompenent({ sapatoProdutos, categoria, onAdd, roandAdd, adiciona
       <h1>SAPATOS ROBERTO/CLICIA</h1>
       <span> Sapatos adicionado <b>favoritados</b>:{sapContar}</span>
       <select onChange={(op) => setOrdem(op.target.value)}>
-          <option value='preco'>Preço</option>
-          <option value='estoque'>Estoque</option>
-          <option value='avaliacao'>Avaliação</option>
-        </select>
+        <option value='preco'>Preço</option>
+        <option value='estoque'>Estoque</option>
+        <option value='avaliacao'>Avaliação</option>
+      </select>
+      <div>
+        <Link to={'/sapatos'}>Ir para página de sapatos</Link>
+      </div>
       <div className="sapTela">
         {
 
