@@ -52,34 +52,37 @@
 
 ## 7. Rotas - React-Router
   
-  [LINK TUTORIAL](https://www.freecodecamp.org/news/how-to-use-react-router-version-6/)
+1. [LINK TUTORIAL](https://www.freecodecamp.org/news/how-to-use-react-router-version-6/)
 
-  1. Instalar react-router-dom v6
-    ```
+2.Instalar react-router-dom v6 
+```
       npm install react-router-dom 
-    ```
-  2. Config index.js
-    ```
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    ```
-  3. Criar componentes que serão páginas únicas
-    FilmesHome
-    JogosHome
+```
+
+3. Config index.js
+```
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+```
   
-  4. Definir rotas no App.js
-    ```
-      <Routes>
-        <Route path="/" element={<Marketplace/>}></Route>
-        <Route path="jogos" element={<JogosHomeComponent/>}></Route>
-        <Route path="filmes" element={<FilmesHomeComponent/>}></Route>
-      </Routes>
-    ```
-  5. Adicionar Link nos componentes para levar a outras páginas
-    ```
+4. Criar componentes que serão páginas únicas
+    * FilmesHome
+    * JogosHome
+  
+5. Definir rotas no App.js
+```
+  <Routes>
+    <Route path="/" element={<Marketplace/>}></Route>
+    <Route path="jogos" element={<JogosHomeComponent/>}></Route>
+    <Route path="filmes" element={<FilmesHomeComponent/>}></Route>
+  </Routes>
+```
+6. Adicionar Link nos componentes para levar a outras páginas
+```
     <Link to="filmes">Clique para ir a página de filmes</Link>
-    ```
+```
+
 ## Recursos mais dinâmicos com rotas
   
   6. Parametros dinâmicos:
