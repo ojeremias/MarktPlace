@@ -169,6 +169,8 @@ App.jsx
       <Route path="*" element={<NotFound />} />
     </Routes>
 ```
+Na definição do componente template abaixo, a navegação dos componentes definidos na rotas ficará dentro do <Outlet />, o conteúdo de navegação será mantido.
+
 ProdutuHomeComponent.js
 ```
   import { Link, Outlet } from "react-router-dom"
@@ -193,6 +195,7 @@ ProdutuHomeComponent.js
 
 ### 7.6 Nested Routes
 Definindo novos arquivos de rotas para melhor separação de conceitos;
+Dessa forma, os arquivos de rotas ficam menores;
 ```
 <Routes>
   <Route path="/" element={<Home />} />
@@ -222,10 +225,11 @@ Definindo novos arquivos de rotas para melhor separação de conceitos;
   }
 ```
 
-## Manual Navigation
+## Navegação manual das rotas
 
-### useNavigation Hook
-
+### useNavigate Hook
+Em um componente qualquer que inicia a navegação, usando o hook e disparando via **navigate('ROTA','PARAMETROS')**. 
+Observe o uso do state. A ação de navegar poderia estar um qualquer método handle de onPress, onClick;
 ```
   const navigate = useNavigate()
 
@@ -234,7 +238,7 @@ Definindo novos arquivos de rotas para melhor separação de conceitos;
     navigate("/books", { replace: true, state: { bookName: "Fake Title" }})
   }
 ```
-
+Já no componente de Page que recebe, para recuperar as informações passando no **state**(body):
 ```
   const {state} = useLocation();
   const { id, color } = state; // Read values passed on state
@@ -242,54 +246,56 @@ Definindo novos arquivos de rotas para melhor separação de conceitos;
 
 # EXTRAS - Tarefa de usar select/ordenar por 
 
-  ## Tarefa de useState, com select
-    ### Layout/HTML/JSX
-    Criar componente <select> com as opções de ordenação.
-        ```
-            <select>
-                <option value="">Ordenar por</option>
-                <option value="nome">Nome</option>
-                <option value="preco">Preço</option>
-                <option value="avaliacao">Avaliaçâo</option>
-            </select>
-        ```
-    ### Criar uma variavel que observa a mudança do critério de ordenação
-    
-    ``` 
-        const [ordem, setOrdem] = useState(null);
-    ```
+## Tarefa de useState, com select
 
-    ### Disparar mudança para ao mudar o select, mudar o atributo de ordenação:
-    ```
-        <select onChange={(evt) => setOrdem(evt.target.value)}>
-            <option value="">Ordenar por</option>
-            <option value="nome">Nome</option>
-            <option value="preco">Preço</option>
-            <option value="avaliacao">Avaliaçâo</option>
-        </select>
-    ```
+### Layout/HTML/JSX
 
-    ### Criar um useEffect que escuta as mudanças no ordem:
-    ```
-         useEffect(() => {
+Criar componente <select> com as opções de ordenação.
+```
+    <select>
+        <option value="">Ordenar por</option>
+        <option value="nome">Nome</option>
+        <option value="preco">Preço</option>
+        <option value="avaliacao">Avaliaçâo</option>
+    </select>
+ ```
+### Criar uma variavel que observa a mudança do critério de ordenação
 
-            console.log('ordenar ' + ordem);
-           
-        
-        }, [ordem]);
-    ```
+``` 
+    const [ordem, setOrdem] = useState(null);
+```
 
-    ### Com a nova ordem, ordenar a lista:
+### Disparar mudança para ao mudar o select, mudar o atributo de ordenação:
+```
+    <select onChange={(evt) => setOrdem(evt.target.value)}>
+        <option value="">Ordenar por</option>
+        <option value="nome">Nome</option>
+        <option value="preco">Preço</option>
+        <option value="avaliacao">Avaliaçâo</option>
+    </select>
+```
 
-    ```
-        useEffect(() => {
-            if(listaBrinquedos?.length >0){
-                const listaOrdenada = listaBrinquedos.sort(function(a,b) {
-                    return (a[ordem] < b[ordem]) ? -1 : (a[ordem] > b[ordem]) ? 1 : 0;
-                });
+### Criar um useEffect que escuta as mudanças no ordem:
+```
+     useEffect(() => {
 
-                console.log(listaBrinquedos);
-                setListaBrinquedos([...listaOrdenada]);
-            }
-        }, [ordem]);
-    ```
+        console.log('ordenar ' + ordem);
+
+
+    }, [ordem]);
+```
+
+### Com a nova ordem, ordenar a lista:
+
+```
+    useEffect(() => {
+        if(listaBrinquedos?.length >0){
+            const listaOrdenada = listaBrinquedos.sort(function(a,b) {
+                return (a[ordem] < b[ordem]) ? -1 : (a[ordem] > b[ordem]) ? 1 : 0;
+            });
+
+            console.log(listaBrinquedos);
+            setListaBrinquedos([...listaOrdenada]);
+        }
+    }, [ordem]);
+```
