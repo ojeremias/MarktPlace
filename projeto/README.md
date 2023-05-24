@@ -245,11 +245,8 @@ Já no componente de Page que recebe, para recuperar as informações passando n
 ```
 
 # EXTRAS - Tarefa de usar select/ordenar por 
-
 ## Tarefa de useState, com select
-
 ### Layout/HTML/JSX
-
 Criar componente <select> com as opções de ordenação.
 ```
     <select>
@@ -258,7 +255,7 @@ Criar componente <select> com as opções de ordenação.
         <option value="preco">Preço</option>
         <option value="avaliacao">Avaliaçâo</option>
     </select>
- ```
+```
 ### Criar uma variavel que observa a mudança do critério de ordenação
 
 ``` 
@@ -280,7 +277,6 @@ Criar componente <select> com as opções de ordenação.
      useEffect(() => {
 
         console.log('ordenar ' + ordem);
-
 
     }, [ordem]);
 ```
