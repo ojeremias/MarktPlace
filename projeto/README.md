@@ -17,9 +17,9 @@
     ```
 4. Na funçâo que trata o click do adicionar, incrementar a variável contagem com:
     * Criar funçâo handleAddFavorito(produto)
-    ```
-        setContagem(contagem++);
-        ```
+```
+   setContagem(contagem++);
+```
 # 6. Hook - React useEffect * 
 
     * Usando a api:
