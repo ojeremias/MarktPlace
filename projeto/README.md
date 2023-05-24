@@ -29,7 +29,7 @@
 
     * (LINK DA API PRODUTOS)[https://dummyjson.com/docs/products]
 
-### ------Primeira parte-----
+### Primeira parte
 
 1. Criar um useEffect dentro do seu compomente que faz um fecth para a api acima, listando a sua categoria. Por exemplo, 
 
@@ -41,7 +41,7 @@ https://dummyjson.com/products/category/womens-shoes
 
 3. Coloque o resultado dos produtos numa variável e exiba na lista abaixo da lista anterior;
 
-### ------ Segunda parte ------
+### Segunda parte
 
 1. Criar um SELECT com as opções de ordenação de produto, mais estoque, menor preço, maior preço, mais bem avaliados
 
