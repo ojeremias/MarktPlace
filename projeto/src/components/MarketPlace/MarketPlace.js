@@ -11,6 +11,7 @@ import InformaticaComponent from '../ComponentInformatica/InformaticaComponent'
 // import DenunciadoComponent from './components/ComponentDenuciado/DenuciadoComponent';
 import BrinquedoComponent from '../ComponentBrinquedo/BrinquedoComponent'
 import TecnologiaComponent from '../ComponentTecnologia/TecnologiaComponent';
+import { Link } from 'react-router-dom';
 
 
 function MarketPlace() {
@@ -303,7 +304,7 @@ function MarketPlace() {
 
     return (
     <div className="MarketPlace">
-
+      
       <div className='favoritosDenunciados'>
         <div className='box'>
           <FavoritoComponent favoritos={favoritos}/>
