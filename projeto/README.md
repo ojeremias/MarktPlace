@@ -51,6 +51,7 @@
 
 
 ## 7. Rotas - React-Router
+### 7.1 Instalação
   
 1. [LINK TUTORIAL](https://www.freecodecamp.org/news/how-to-use-react-router-version-6/)
 
@@ -65,7 +66,7 @@
     <App />
   </BrowserRouter>
 ```
-  
+### 7.2 Criar
 4. Criar componentes que serão páginas únicas
     * FilmesHome
     * JogosHome
@@ -83,8 +84,7 @@
     <Link to="filmes">Clique para ir a página de filmes</Link>
 ```
 
-## Rotas: Recursos dinâmicos
-### Enviando parâmetros:
+### 7.3 Rota dinâmicos - Enviando parâmetros:
   
 1. Parametros dinâmicos:
 Passando parâmetros pelas rotas:
@@ -128,7 +128,7 @@ Uma vez declarada as variáveis, e o useEffect definido, você pode montar o ret
     )
 ```
     
-### 7. Rota default - não encontrada
+### 7.4 Rota default - não encontrada
 Configurando uma rota default:
 App.jsx
 ```
@@ -150,7 +150,7 @@ App.jsx
   </Routes>
 ```
 
-9. Layout Compartilhados
+### 7.5 Layout Compartilhados
 
 Ex.: Criar uma área comum, por exemplo cabeçalho e/ou rodapé para diferentes componentes 
 App.jsx
@@ -191,9 +191,7 @@ ProdutuHomeComponent.js
 
 ```
 
-## Extras
-
-### 1 Nested Routes
+### 7.6 Nested Routes
 Definindo novos arquivos de rotas para melhor separação de conceitos;
 ```
 <Routes>
