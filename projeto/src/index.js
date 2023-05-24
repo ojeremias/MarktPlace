@@ -20,6 +20,7 @@ ReactDOM.render(
         <Route path="/category/brinquedos" element={<BrinquedosPageComponent />} />
         <Route path="*" element={<ErrorPage />} />
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
