@@ -257,3 +257,18 @@ Já no componente de Page que recebe, para recuperar as informações passando n
     <option value="avaliacao">Avaliaçâo</option>
 </select>
 ```
+
+2. Criar variável que observa a mudança de ordenação:
+```
+const [ordem, setOrdem] = useState(null);
+```
+
+3. Disparar mudança ao selecionar um novo método de ordenação, alterando o serOrdem:
+```
+ <select onChange={(evt) => setOrdem(evt.target.value)}>
+    <option value="">Ordenar por</option>
+    <option value="nome">Nome</option>
+    <option value="preco">Preço</option>
+    <option value="avaliacao">Avaliaçâo</option>
+</select>
+```
