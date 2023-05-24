@@ -88,13 +88,14 @@
     ```
   7. Rota default - não encontrada
     Configurando uma rota default:
-    ``` jsx
+    App.jsx
+    ```
       <Route path="*" element={<NotFound />} />
     ```
   8. Nested Routes
     Agrupamento de rotas:
+    App.jsx
     ``` 
-App.jsx
       <Routes>
         <Route path="/" element={<Marketplace />} />
         <Route path="/filmes">
@@ -149,10 +150,9 @@ App.jsx
 
 ## Extras
 
-1. Nested Routes
+### 1 Nested Routes
 Definindo novos arquivos de rotas para melhor separação de conceitos;
 ```
-.jsx
 <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/books/*" element={<BookRoutes />} />
@@ -161,8 +161,6 @@ Definindo novos arquivos de rotas para melhor separação de conceitos;
 ```
 
 ```
-.JSX
-
   import { Routes, Route } from "react-router-dom"
   import { BookList } from "./pages/BookList"
   import { Book } from "./pages/Book"
@@ -187,7 +185,7 @@ Definindo novos arquivos de rotas para melhor separação de conceitos;
 
 ### useNavigation Hook
 
-``` .JSx
+```
   const navigate = useNavigate()
 
   function onSubmit() {
@@ -197,18 +195,15 @@ Definindo novos arquivos de rotas para melhor separação de conceitos;
 ```
 
 ```
-  .JS
   const {state} = useLocation();
   const { id, color } = state; // Read values passed on state
 ```
 
-    
+# EXTRAS - Tarefa de usar select/ordenar por 
 
-# EXTRAS 
-
-  1. Tarefa de useState, com select
-    a. Interface
-        Criar componente <select> com as opções de ordenação.
+  ## Tarefa de useState, com select
+    ### Layout/HTML/JSX
+    Criar componente <select> com as opções de ordenação.
         ```
             <select>
                 <option value="">Ordenar por</option>
@@ -217,13 +212,14 @@ Definindo novos arquivos de rotas para melhor separação de conceitos;
                 <option value="avaliacao">Avaliaçâo</option>
             </select>
         ```
-    b. Criar uma variavel que observa a mudança do critério de ordenação
-    ``` jsx
+    ### Criar uma variavel que observa a mudança do critério de ordenação
+    
+    ``` 
         const [ordem, setOrdem] = useState(null);
     ```
 
-    c. Disparar mudança para ao mudar o select, mudar o atributo de ordenação
-    ```jsx
+    ### Disparar mudança para ao mudar o select, mudar o atributo de ordenação:
+    ```
         <select onChange={(evt) => setOrdem(evt.target.value)}>
             <option value="">Ordenar por</option>
             <option value="nome">Nome</option>
@@ -232,8 +228,8 @@ Definindo novos arquivos de rotas para melhor separação de conceitos;
         </select>
     ```
 
-    d. Criar um useEffect que escuta as mudanças no ordem:
-    ``` jsx
+    ### Criar um useEffect que escuta as mudanças no ordem:
+    ```
          useEffect(() => {
 
             console.log('ordenar ' + ordem);
@@ -242,9 +238,9 @@ Definindo novos arquivos de rotas para melhor separação de conceitos;
         }, [ordem]);
     ```
 
-    e. Com a nova ordem, ordenar a lista
+    ### Com a nova ordem, ordenar a lista:
 
-    ``` jsx
+    ```
         useEffect(() => {
             if(listaBrinquedos?.length >0){
                 const listaOrdenada = listaBrinquedos.sort(function(a,b) {
