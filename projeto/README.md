@@ -263,7 +263,7 @@ Já no componente de Page que recebe, para recuperar as informações passando n
 const [ordem, setOrdem] = useState(null);
 ```
 
-3. Disparar mudança ao selecionar um novo método de ordenação, alterando o serOrdem:
+3. Disparar mudança ao selecionar um novo método de ordenação, alterando o **setOrdem**:
 ```
  <select onChange={(evt) => setOrdem(evt.target.value)}>
     <option value="">Ordenar por</option>
@@ -271,4 +271,24 @@ const [ordem, setOrdem] = useState(null);
     <option value="preco">Preço</option>
     <option value="avaliacao">Avaliaçâo</option>
 </select>
+```
+
+4. Criar um useEffect que escuta as mudanças no ordem:
+```
+useEffect(() => {
+    console.log('ordenar ' + ordem);
+}, [ordem]);
+```
+
+5. Com a nova ordem, ordenar a lista:
+```
+useEffect(() => {
+    if(listaProdutos?.length >0){
+        const listaOrdenada = listaProdutos.sort(function(a,b) {
+            return (a[ordem] < b[ordem]) ? -1 : (a[ordem] > b[ordem]) ? 1 : 0;
+        });
+
+        setListaBrinquedos([...listaOrdenada]);
+    }
+}, [ordem]);
 ```
