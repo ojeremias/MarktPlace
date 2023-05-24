@@ -50,7 +50,7 @@
     transform: translate(0px, -8px);
 }
 .denunciar button:hover{
-    background-color: red;
+    background-color: tomato;
     transform: translate(0px, -8px);
 }
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import '../../App.css';
 import ComidaComponent from '../ComponentComida/ComidaComponent';
 import SapatoCompenent from '../ComponentSapato/SapatoCompenent';
-import BebidaComponent from '../ComponentBebida/BebidaComponent'
+import PerfumeComponent from '../ComponentPerfume/PerfumeComponent'
 import SalgadoCompenent from '../ComponentSalgado/SalgadoComponent';
 import MaquiagemComponent from '../ComponentMaquiagem/ComponentMaquiagem';
 import FavoritoComponent from '../ComponentFavorito/FavoritoComponent';
@@ -99,22 +99,25 @@ function MarketPlace() {
       img:'./img/nike3.jpg'
     },
   ]
-    const bebidaProdutos=[
+    const PerfumeProdutos=[
       {
         id: 1,
         nome: 'Red Label',
         preco: 120.00,
+        img:'./img/redlabel.png'
       },
       {
         id:2,
         nome:'Corote',
         preco: 3.50,
+        img:'./img/corote.png'
 
       },
       {
         id: 3,
         nome:'Pitu',
-        preco: 7.00
+        preco: 7.00,
+        img:'./img/pitu'
       }
     ]
     const informaticaProdutos=[
@@ -327,7 +330,8 @@ function MarketPlace() {
           <SalgadoCompenent adicionarDenuciado={adicionarDenuciado} adicionarFavoritos={adicionarFavoritos} salgadoProdutos={salgadoProdutos}/>
         </div>
         <div>
-          <BebidaComponent adicionarFavoritos={adicionarFavoritos} bebidaProdutos={bebidaProdutos}/>
+          <PerfumeComponent adicionarFavoritos={adicionarFavoritos} adicionarDenuciado={adicionarDenuciado} 
+          PerfumeProdutos={PerfumeProdutos}/>
         </div>
         <div>
           <BrinquedoComponent adicionarFavoritos={adicionarFavoritos} adicionarDenuciado={adicionarDenuciado} brinquedoProdutos={brinquedoProdutos}/>

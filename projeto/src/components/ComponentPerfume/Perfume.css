@@ -1,0 +1,22 @@
+.tagAdicionado{
+   text-align: center;
+}
+
+.carrosselPerf{
+   display: flex;
+}
+.perfumeCard{
+   width: 130px;
+   height: 230px;
+   border-radius: 8px;
+   padding: 20px;
+   font-family: arial;
+   font-weight: 700;
+   font-size: 14px;
+   
+}
+.perfumeImg{
+   width: 300px;
+}
+.perBot{
+}
