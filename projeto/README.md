@@ -249,5 +249,10 @@ Já no componente de Page que recebe, para recuperar as informações passando n
 ### Layout/HTML/JSX
 
 ```
-const a = 10;
+<select>
+    <option value="">Ordenar por</option>
+    <option value="nome">Nome</option>
+    <option value="preco">Preço</option>
+    <option value="avaliacao">Avaliaçâo</option>
+</select>
 ```
