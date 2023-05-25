@@ -90,7 +90,7 @@
 Passando parâmetros pelas rotas:
 App.jsx
 ``` 
-  <Route path="/produto/:id" element={<ProdutoDetalhes />} />
+  <Route path="/produto/:id" element={<ProdutoDetalhesPage />} />
 ```
 
 No seu componente, recuperar o parâmetro
