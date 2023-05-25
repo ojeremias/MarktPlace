@@ -1,5 +1,6 @@
 import React from 'react';
 import BrinquedoComponent from './BrinquedoComponent';
+import './Brinquedo.css';
 import { Link } from 'react-router-dom';
 
 function BrinquedosPageComponent() {
