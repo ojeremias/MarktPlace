@@ -110,7 +110,7 @@ Uma vez estadando com parâmetro, fazer um _useEffect_ para realizar a consulta 
             
             setProduto({
                 id: p.id,
-                nome: p.name,
+                nome: p.title,
                 preco: p.price,
                 avaliacao: p.rating,
                 estoque: p.stock
