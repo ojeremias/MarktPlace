@@ -16,7 +16,7 @@ export default function BebidaComponent   ({adicionarFavoritos,adicionarDenuciad
             function quantDenAContar(){
                     setPerfumeDenuciada(perfumeDenuciada + 1)
 
-     }
+            }
 
      async function getProdutos(categoria) {
         const response = await fetch(`https://dummyjson.com/products/category/${categoria}`);
