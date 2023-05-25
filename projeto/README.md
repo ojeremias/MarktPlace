@@ -127,6 +127,16 @@ Uma vez declarada as variáveis, e o useEffect definido, você pode montar o ret
         <div>{produto.nome}</div>
     )
 ```
+
+Lembre-se de verificar se o produto já está carregado, como:
+
+```
+{ produto && 
+    <div>
+        <h1>{ produto?.nome }</h1>
+    </div>
+}
+```
     
 ### 7.4 Rota default - não encontrada
 Configurando uma rota default:
