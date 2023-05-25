@@ -137,7 +137,8 @@ Lembre-se de verificar se o produto já está carregado, como:
     </div>
 }
 ```
-    
+Lembre-se que a operação de fetch e o useEffect provavelmente serâo executados depois de renderizaçâo, assim o componente vai iniciar com o produto null, e sem tratamento terá erro.
+
 ### 7.4 Rota default - não encontrada
 Configurando uma rota default:
 App.jsx
