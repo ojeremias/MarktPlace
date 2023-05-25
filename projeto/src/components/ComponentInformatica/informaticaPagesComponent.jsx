@@ -49,10 +49,10 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
 
   useEffect(() => {
     const listaOrdenada = listaInfor.sort(function (a, b) {
-      return a[ordem] < b[ordem] ? -1 : a[ordem] > b[ordem] ? 1 : 0;
+      return a[ordem] > b[ordem] ? -1 : a[ordem] < b[ordem] ? 1 : 0;
     });
 
-    setlistaInfor(listaOrdenada);
+    setlistaInfor([...listaOrdenada]);
   }, [ordem]);
 
 
@@ -95,19 +95,6 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
                
               <Link to={ `/informatica/${p.id}`} >Ver Mais sobre esse Produto: </Link>
               </div>
-
-              <div className='button' onClick={() => {
-                adicionarFavoritos(p);
-
-                setQuantidade(quantidade + 1);
-              }}>Adicionar </div>
-
-              <div className='button' onClick={() => {
-                adicionarDenuciado(p);
-                setQuantidade1(quantidade1 + 1);
-
-              }}>Denuciar</div>
-
 
             </div>
 

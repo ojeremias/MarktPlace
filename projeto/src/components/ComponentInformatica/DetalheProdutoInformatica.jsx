@@ -30,43 +30,38 @@ function DetalheProdutoInformatica() {
         loadProduto();
     }, [id]);
 
-
     return (
         <div className='containerInformaticaDetalhes'>
             <h2>Detalhes do produto ID: {id}</h2>
-            {produto &&
+            {
             
                 <div className='telaInformaticaCardDetalhes'>
 
                     <div className='telaInformaticaImgDetalhes' >
-                        <img className='img' src={produto.img}></img>
-                        <img className='img' src={produto.img1}></img>
-                        <img className='img' src={produto.img2}></img>
+                        <img className='img' src={produto?.img}></img>
+                        <img className='img' src={produto?.img1}></img>
+                        <img className='img' src={produto?.img2}></img>
                        
                     </div>
 
                     <div className='textoDetalhes' >
-                        Modelo: <span className='textoPDetalhes'>{produto.nome}</span>
+                        Modelo: <span className='textoPDetalhes'>{produto?.nome}</span>
                     </div>
                     <div className='textoDetalhes' >
-                        Marca: <span className='textoPDetalhes'>{produto.marca}</span>
+                        Marca: <span className='textoPDetalhes'>{produto?.marca}</span>
                     </div>
                     <div className='textoDetalhes' >
-                        Descrição: <span className='textoPDetalhes'>{produto.descricao}</span>
+                        Descrição: <span className='textoPDetalhes'>{produto?.descricao}</span>
                     </div>
                     <div className='textoDetalhes'>
-                        Preço: <span className='textoPDetalhes'>${produto.preco}</span>
+                        Preço: <span className='textoPDetalhes'>${produto?.preco}</span>
                     </div>
                     <div className='textoDetalhes'>
-                        Quantidade Disponivel: <span className='textoPDetalhes'>{produto.estoque}</span>
+                        Quantidade Disponivel: <span className='textoPDetalhes'>{produto?.estoque}</span>
                     </div>
                     <div className='textoDetalhes'>
-                        Avaliação: <span className='textoPDetalhes'>{produto.avaliacao}</span>
+                        Avaliação: <span className='textoPDetalhes'>{produto?.avaliacao}</span>
                     </div>
-
-
-
-
                 </div>
             }
             <h3><Link to="/informatica">Retornar Ao setor Informatica</Link></h3>
