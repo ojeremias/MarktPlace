@@ -107,4 +107,6 @@ function InformaticaComponent({ adicionarFavoritos, adicionarDenuciado }) {
 
 }
 
-export default InformaticaComponent
+export default InformaticaComponent;
+
+// dnhudhfud
