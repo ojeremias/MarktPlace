@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavoritos, adicionarDenuciado}) {
@@ -7,6 +8,7 @@ function SalgadoComponent ({ salgadoProdutos, categoria, onAdd, adicionarFavorit
     return (
         <div className="box-produto">
             <h1 id="tituloSalgado">Salgados</h1>
+            <Link to={"/salgados"}>algo</Link>
             <table>
                 <tbody>
                     <tr>{
